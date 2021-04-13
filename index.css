@@ -1,0 +1,80 @@
+html {
+	background-color: #170A08;
+	color: #C154A3;
+	font-family: Arial;
+	text-align: center;
+}
+
+body {
+	margin: 0px;
+}
+
+header {
+	position: relative;
+	background-color: #C154A3;
+	color: #170A08;
+	border: black solid;
+	border-width: 0vmax 0.4vmax 0.4vmax 0.4vmax;
+	width: 50vmax;
+	padding: 10px;
+	margin: auto auto 2vmax auto;
+}
+
+h1 {
+	font-size: 4vmax;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+h3 {
+	font-size: 7vmax;
+	margin: 1vmax auto auto auto;
+}
+
+a {
+  color: hotpink;
+}
+
+img {
+	width: 1.6vmax;
+	margin-left: 0.1vmax;
+	margin-right: 0.2vmax;
+}
+
+.tournament {
+	position: relative;
+	border: 2px solid white;
+	margin: 1vmax auto auto auto;
+	padding: 1vmax 0px 1vmax 0px;
+	width: 80vmax;
+	font-size: calc(2px + 0.8vw);
+}
+
+.details {
+	border-bottom: 1px white solid;
+	padding-bottom: 1vmax;
+}
+
+.details * {
+	padding: 0.2vmax;
+}
+
+.tourney_name {
+	font-size: calc(12px + 1.5vw);
+	font-weight: bold;
+}
+
+.match {
+	border-bottom: 1px solid;
+	padding: 1vmax 0.5vmax 0.7vmax 0.5vmax;
+}
+
+.match_name {
+	font-size: calc(5px + 1.5vw);
+	font-weight: bold;
+}
+
+.match_players {
+	margin-top: 1.2vmax;
+	font-size: calc(2px + 0.8vw);
+}
