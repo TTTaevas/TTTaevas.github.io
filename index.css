@@ -65,13 +65,28 @@ img {
 }
 
 .match {
+	position: relative;
 	border-bottom: 1px solid;
 	padding: 1vmax 0.5vmax 0.7vmax 0.5vmax;
+}
+
+.match_time {
+	position: absolute;
+	top: 2.75vmax;
+	left: -4vmax;
+	transform: rotate(-90deg);
 }
 
 .match_name {
 	font-size: calc(5px + 1.5vw);
 	font-weight: bold;
+}
+
+.number_players {
+	position: absolute;
+	top: 2.75vmax;
+	right: -3.50vmax;
+	transform: rotate(90deg);
 }
 
 .match_players {

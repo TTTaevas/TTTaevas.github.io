@@ -4,7 +4,7 @@
 require('dotenv').config()
 const fs = require('fs')
 
-var html = '<!DOCTYPE html><html><head><title>Matches reffed by Taevas</title><link rel="stylesheet" type="text/css" href="./index.css"></head><body><header><h1>Matches reffed by Taevas</h1></header>'
+var html = '<!DOCTYPE html><html><head><meta charset="utf-8"><title>Matches reffed by Taevas</title><link rel="stylesheet" type="text/css" href="./index.css"></head><body><header><h1>Matches reffed by Taevas</h1></header>'
 tournaments = []
 
 class Tournament {
@@ -17,10 +17,11 @@ class Tournament {
 }
 
 class Match {
-	constructor(name, id, players) {
+	constructor(name, id, players, start) {
 		this.name = name
 		this.link = `https://osu.ppy.sh/community/matches/${id}`
 		this.players = players
+		this.start = start
 	}
 }
 
@@ -69,7 +70,9 @@ async function buildWebpage() {
 		for (let e = 0; e < tournaments[i].matches.length; e++) {
 			let match = tournaments[i].matches[e]
 
-			html = html + `<div class="match"><div class="match_name"><a href="${match.link}">${match.name}</a></div><div class="match_players">`
+			html = html + `<div class="match"><div class="match_time">${match.start.substring(0, 10)}</div>`
+			html = html + `<div class="match_name"><a href="${match.link}">${match.name}</a></div>`
+			html = html + `<div class="number_players">${match.players.length} player${match.players.length > 1 ? "s" : ""}</div><div class="match_players">`
 			for (let o = 0; o < match.players.length; o++) {
 				html = html + `<img src=${match.players[o].flag}><a href="https://osu.ppy.sh/users/${match.players[o].id}">${match.players[o].name}</a>`
 				if (o+1 != match.players.length) {html = html + " | "}
@@ -92,6 +95,7 @@ async function addTournament(name, forum, schedule, matches) {
 	for (let i = 0; i < matches.length; i++) {
 		console.log(`\nMatch ${i+1}:`)
 		let match = await get("get_match", `mp=${matches[i]}`)
+		let start = match.games[0].start_time
 
 		let players = []
 		for (let e = 0; e < match.games.length; e++) {
@@ -110,7 +114,7 @@ async function addTournament(name, forum, schedule, matches) {
 			players[e] = new Player(player.user_id, player.username, player.country)
 		}
 		
-		proper_matches.push(new Match(match.match.name, match.match.match_id, players))
+		proper_matches.push(new Match(match.match.name, match.match.match_id, players, start))
 	}
 
 	tournaments.push(new Tournament(name, forum, schedule, proper_matches))
