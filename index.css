@@ -26,6 +26,17 @@ h1 {
 	margin-bottom: 0px;
 }
 
+.search {
+	border: solid 1px black;
+	font-size: 17px;
+	padding: 5px;
+	text-align: center;
+}
+
+#number_results {
+
+}
+
 h3 {
 	font-size: 7vmax;
 	margin: 1vmax auto auto auto;
@@ -78,7 +89,7 @@ img {
 }
 
 .match_name {
-	font-size: calc(5px + 1.5vw);
+	font-size: calc(8px + 1.2vw);
 	font-weight: bold;
 }
 

@@ -4,7 +4,8 @@
 require('dotenv').config()
 const fs = require('fs')
 
-var html = '<!DOCTYPE html><html><head><meta charset="utf-8"><title>Matches reffed by Taevas</title><link rel="stylesheet" type="text/css" href="./index.css"></head><body><header><h1>Matches reffed by Taevas</h1></header>'
+var html = '<!DOCTYPE html><html><head><meta charset="utf-8"><title>Matches reffed by Taevas</title><link rel="stylesheet" type="text/css" href="./index.css"><script type="text/javascript" src="./search.js"></script></head><body onload="search(``)"><header><h1>Matches reffed by Taevas</h1></header>'
+html = html + '<input type="text" class="search" placeholder="Look for a player..." oninput="search(this.value.toLowerCase())"><p id="number_results"></p>'
 tournaments = []
 
 class Tournament {
