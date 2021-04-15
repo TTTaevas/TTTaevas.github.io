@@ -5,9 +5,6 @@ require('dotenv').config()
 const fs = require('fs')
 counter = 0
 
-var html = '<!DOCTYPE html><html><head><meta charset="utf-8"><title>Matches reffed by Taevas</title><link rel="stylesheet" type="text/css" href="./index.css"><script type="text/javascript" src="./search.js"></script></head><body onload="search(``)"><header><h1>Matches reffed by Taevas</h1></header>'
-html = html + '<input type="text" class="search" placeholder="Look for a player..." oninput="search(this.value.toLowerCase())"><p id="number_results"></p>'
-
 class Tournament {
 	constructor(name, forum, schedule, matches) {
 		this.name = name
@@ -33,8 +30,6 @@ class Player {
 		this.flag = `https://osu.ppy.sh/images/flags/${flag}.png`
 	}
 }
-
-buildWebpage(html)
 
 async function buildWebpage() {
 
@@ -65,7 +60,12 @@ async function buildWebpage() {
 	]
 	// CHANGE DETAILS ABOVE
 
-	const tournaments = await Promise.all(await new_tournaments.map(async tournament => await addTournament(tournament[0], tournament[1], tournament[2], tournament[3])))
+	let tournaments = []
+
+	for (let i = 0; i < new_tournaments.length; i++) {
+		let tournament = new_tournaments[i]
+		tournaments.push(await addTournament(tournament[0], tournament[1], tournament[2], tournament[3]))
+	}
 	
 	for (let i = 0; i < tournaments.length; i++) {
 		// Beginning and details
@@ -96,45 +96,40 @@ async function buildWebpage() {
 	})
 }
 
-async function addTournament(name, forum, schedule, matches) {
-	console.log(`\nGetting the data needed for ${name}...\n`)
+async function addTournament(name, forum, schedule, mp_ids) {
+	console.log(`\n${name}: GETTING MATCHES`)
+	const matches = await Promise.all(await mp_ids.map(async mp_id => await addMatch(name, mp_id)))
+	console.log(`${name}: FINISHED\n`)
+	return new Tournament(name, forum, schedule, matches)
+}
 
-	return new Promise(async (resolve, reject) => { // The reason why async/await is used here is due to the API's rate limits
-		// Until a way is found to directly limit the requests client-side, virtually limit the number of requests per minute using async/await
-		let proper_matches = []
-
-		for (let i = 0; i < matches.length; i++) {
-			console.log(`(${counter++}) GETTING MATCH ${i+1} for ${name}`)
-			let match = await get("get_match", `mp=${matches[i]}`)
-			let start = match.games[0].start_time
-
-			let players = []
-			for (let e = 0; e < match.games.length; e++) {
-				for (let o = 0; o < match.games[e].scores.length; o++) {
-					let already_in = false
-					for (let a = 0; a < players.length; a++) {
-						if (players[a] == match.games[e].scores[o].user_id || match.games[e].scores[o].score == "0") {already_in = true}
-					}
-					if (!already_in) {players.push(match.games[e].scores[o].user_id)}
-				}
+async function addMatch(name, mp_id) {
+	let match = await get("get_match", `mp=${mp_id}`)
+	let start = match.games[0].start_time
+	
+	let players_ids = []
+	for (let i = 0; i < match.games.length; i++) {
+		for (let e = 0; e < match.games[i].scores.length; e++) {
+			let already_in = false
+			for (let o = 0; o < players_ids.length; o++) {
+				if (players_ids[o] == match.games[i].scores[e].user_id || match.games[i].scores[e].score == "0") {already_in = true}
 			}
-
-			for (let e = 0; e < players.length; e++) {
-				console.log(`(${counter++}) GETTING PLAYER ${e+1} for ${name}, match ${i+1}`)
-				let player = await get("get_user", `u=${players[e]}`)
-				player = player[0]
-				players[e] = new Player(player.user_id, player.username, player.country)
-			}
-			
-			proper_matches.push(new Match(match.match.name, match.match.match_id, players, start))
+			if (!already_in) {players_ids.push(match.games[i].scores[e].user_id)}
 		}
+	}
+	console.log(`(${counter}) ${name}: GETTING PLAYERS FOR MATCH ${mp_id}`)
+	const players = await Promise.all(await players_ids.map(async player_id => await addPlayer(player_id)))
+	return new Match(match.match.name, match.match.match_id, players, start)
+}
 
-		console.log(`\nDone getting the data needed for ${name}!\n`)
-		resolve(new Tournament(name, forum, schedule, proper_matches))
-	})
+async function addPlayer(player_id) {
+	let player = await get("get_user", `u=${player_id}`)
+	player = player[0]
+	return new Player(player.user_id, player.username, player.country)
 }
 
 async function get(type, additional) {
+	counter++
 	const axios = require("axios")
 	const resp = await axios({
 		method: "get",
@@ -148,3 +143,8 @@ async function get(type, additional) {
 	
 	return resp.data
 }
+
+var html = '<!DOCTYPE html><html><head><meta charset="utf-8"><title>Matches reffed by Taevas</title><link rel="stylesheet" type="text/css" href="./index.css"><script type="text/javascript" src="./search.js"></script></head><body onload="search(``)"><header><h1>Matches reffed by Taevas</h1></header>'
+html = html + '<input type="text" class="search" placeholder="Look for a player..." oninput="search(this.value.toLowerCase())"><p id="number_results"></p>'
+
+buildWebpage(html)
