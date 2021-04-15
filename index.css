@@ -47,7 +47,7 @@ a {
 }
 
 img {
-	width: 1.6vmax;
+	max-width: 30px;
 	margin-left: 0.1vmax;
 	margin-right: 0.2vmax;
 }
@@ -103,4 +103,29 @@ img {
 .match_players {
 	margin-top: 1.2vmax;
 	font-size: calc(2px + 0.8vw);
+}
+
+#statistics {
+	position: relative;
+}
+
+#player_appearances, #flag_appearances {
+	position: absolute;
+	top: 1vmax;
+	width: 20vmax;
+	min-width: 200px;
+	border: 3px white solid;
+	font-weight: bold;
+}
+
+#player_appearances {
+	left: 10vmax;
+}
+
+#flag_appearances {
+	right: 10vmax;
+}
+
+.row {
+	padding: 0.4vmax;
 }

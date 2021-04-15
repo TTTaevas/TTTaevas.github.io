@@ -68,12 +68,12 @@ async function buildWebpage() {
 	}
 	
 	for (let i = 0; i < tournaments.length; i++) {
-		// Beginning and details
+		// Tourney details
 		html = html + `<div class="tournament"><div class="details"><div class="tourney_name"><a href="${tournaments[i].forum}">${tournaments[i].name}</a></div>`
 		html = html + `<div class="schedule">${tournaments[i].schedule[0].getMonth()+1}/${tournaments[i].schedule[0].getDate()}/${tournaments[i].schedule[0].getFullYear()} - ${tournaments[i].schedule[1].getMonth()+1}/${tournaments[i].schedule[1].getDate()}/${tournaments[i].schedule[1].getFullYear()}</div>`
 		html = html + `<div class="number_matches">Reffed ${tournaments[i].matches.length} matches</div></div><div class="matches">`
 
-		// Matches and end
+		// Tourney matches
 		for (let e = 0; e < tournaments[i].matches.length; e++) {
 			let match = tournaments[i].matches[e]
 
