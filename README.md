@@ -25,4 +25,6 @@ Arrays are used to represent tournaments in the `new_tournaments` array. They ar
 - The third element of an array is the tournament's schedule, as an array of [JS dates](https://www.w3schools.com/jsref/jsref_obj_date.asp), from the first day of qualifiers to the last day of (grand) finals.
 - The fourth element of an array is an array of all the ids of the multiplayer matches you have reffed, as integers. Strings should work fine too.
 
+You will need to install dependencies before proceeding to the last step. In the `filler` folder, simply do `npm install`, if [npm](https://www.npmjs.com/) is installed! (if it's not installed, I recommend installing [Node.js](https://nodejs.org/))
+
 Once you're done with the above, you simply need to generate a new `index.html` by using the `node filler.js` command in the `filler` folder with [Node.js](https://nodejs.org/), then push a commit to your project!

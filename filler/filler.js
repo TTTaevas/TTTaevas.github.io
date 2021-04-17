@@ -49,13 +49,19 @@ async function buildWebpage() {
 		[78514204, 78768259, 79318056, 79339405, 79877379, 79937869, 79943073, 79955524, 80580537, 80608443]],
 
 		["Osu! Tournament 1 (TIER 2)", "https://osu.ppy.sh/community/forums/topics/1258192", [new Date(2021, 2, 20), new Date(2021, 3, 25)],
-		[78513180, 78615645, 78618985, 78692074, 79303835, 79317324, 79844339, 79849442, 79946482, 79962520, 79973768, 80467449, 80512103, 80512148]],
+		[78513180, 78615645, 78618985, 78692074, 79303835, 79317324, 79844339, 79849442, 79946482, 79962520, 79973768, 80467449, 80512103, 80512148, 81037578]],
 
 		["Miyu's Flower Run 2021", "https://osu.ppy.sh/community/forums/topics/1261786", [new Date(2021, 3, 10), new Date(2021, 4, 22)],
-		[80466676, 80561256, 80567323, 80575071]],
+		[80466676, 80561256, 80567323, 80575071, 81076238, 81087809, 81087857, 81098822, 81119664]],
 
 		["osu! Malaysia Amateur Tournament 2nd Edition", "https://osu.ppy.sh/community/forums/topics/1247275", [new Date(2021, 2, 5), new Date(2021, 3, 25)],
-		[80465632, 80476682, 80563350]]
+		[80465632, 80476682, 80563350, 81088133]],
+
+		["Irish Circle Clicking Tournament 3", "https://osu.ppy.sh/community/forums/topics/1266363", [new Date(2021, 3, 17), new Date(2021, 3, 18)],
+		[81026037]],
+
+		["ReadyUp, Game, Win! April Blitz", "", [new Date(2021, 3, 17), new Date(2021, 3, 18)],
+		[81096777]]
 
 	]
 	// CHANGE DETAILS ABOVE
@@ -71,7 +77,7 @@ async function buildWebpage() {
 		// Tourney details
 		html = html + `<div class="tournament"><div class="details"><div class="tourney_name"><a href="${tournaments[i].forum}">${tournaments[i].name}</a></div>`
 		html = html + `<div class="schedule">${tournaments[i].schedule[0].getMonth()+1}/${tournaments[i].schedule[0].getDate()}/${tournaments[i].schedule[0].getFullYear()} - ${tournaments[i].schedule[1].getMonth()+1}/${tournaments[i].schedule[1].getDate()}/${tournaments[i].schedule[1].getFullYear()}</div>`
-		html = html + `<div class="number_matches">Reffed ${tournaments[i].matches.length} matches</div></div><div class="matches">`
+		html = html + `<div class="number_matches">Reffed ${tournaments[i].matches.length} match${tournaments[i].matches.length > 1 ? "es" : ""}</div></div><div class="matches">`
 
 		// Tourney matches
 		for (let e = 0; e < tournaments[i].matches.length; e++) {
