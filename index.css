@@ -15,7 +15,7 @@ header {
 	color: #170A08;
 	border: black solid;
 	border-width: 0vmax 0.4vmax 0.4vmax 0.4vmax;
-	width: 50vmax;
+	width: 50%;
 	padding: 10px;
 	margin: auto auto 2vmax auto;
 }
@@ -57,8 +57,7 @@ img {
 	border: 2px solid white;
 	margin: 1vmax auto auto auto;
 	padding: 1vmax 0px 1vmax 0px;
-	width: 80vmax;
-	font-size: calc(2px + 0.8vw);
+	width: 85%;
 }
 
 .details {
@@ -83,7 +82,7 @@ img {
 
 .match_time {
 	position: absolute;
-	top: 2.75vmax;
+	top: 41%;
 	left: -4vmax;
 	transform: rotate(-90deg);
 }
@@ -95,18 +94,29 @@ img {
 
 .number_players {
 	position: absolute;
-	top: 2.75vmax;
+	top: 41%;
 	right: -3.50vmax;
 	transform: rotate(90deg);
 }
 
+@media screen and (max-width: 1200px) {
+	.number_players, .match_time {
+		display: none;
+	}
+}
+
 .match_players {
 	margin-top: 1.2vmax;
-	font-size: calc(2px + 0.8vw);
 }
 
 #statistics {
 	position: relative;
+}
+
+@media screen and (max-width: 700px) {
+	#statistics {
+		display: none;
+	}
 }
 
 #player_appearances, #flag_appearances {
