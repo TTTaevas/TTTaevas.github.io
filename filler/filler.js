@@ -55,7 +55,7 @@ async function buildWebpage() {
 		[80466676, 80561256, 80567323, 80575071, 81076238, 81087809, 81087857, 81098822, 81119664, 81171482]],
 
 		["osu! Malaysia Amateur Tournament 2nd Edition", "https://osu.ppy.sh/community/forums/topics/1247275", [new Date(2021, 2, 5), new Date(2021, 3, 25)],
-		[80465632, 80476682, 80563350, 81088133, 81181496]],
+		[80465632, 80476682, 80563350, 81088133, 81181496, 81253559]],
 
 		["Irish Circle Clicking Tournament 3", "https://osu.ppy.sh/community/forums/topics/1266363", [new Date(2021, 3, 17), new Date(2021, 3, 18)],
 		[81026037]],
