@@ -49,6 +49,7 @@ a {
 img {
 	max-width: 30px;
 	margin-left: 0.1vmax;
+	margin-top: 1.2vmax;
 	margin-right: 0.2vmax;
 }
 
@@ -82,9 +83,13 @@ img {
 
 .match_time {
 	position: absolute;
-	top: 41%;
-	left: -4vmax;
-	transform: rotate(-90deg);
+	padding: 5px;
+}
+
+.number_players {
+	position: absolute;
+	right: 0;
+	padding: 5px;
 }
 
 .match_name {
@@ -92,21 +97,10 @@ img {
 	font-weight: bold;
 }
 
-.number_players {
-	position: absolute;
-	top: 41%;
-	right: -3.50vmax;
-	transform: rotate(90deg);
-}
-
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1400px) {
 	.number_players, .match_time {
 		display: none;
 	}
-}
-
-.match_players {
-	margin-top: 1.2vmax;
 }
 
 #statistics {
