@@ -133,3 +133,7 @@ img {
 .row {
 	padding: 0.4vmax;
 }
+
+.row img {
+	margin-top: 0px;
+}
