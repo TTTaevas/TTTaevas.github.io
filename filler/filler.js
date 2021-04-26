@@ -86,15 +86,15 @@ async function buildWebpage() {
 		for (let e = 0; e < tournaments[i].matches.length; e++) {
 			let match = tournaments[i].matches[e]
 
-			html = html + `<div class="match_time">${match.schedule}</div>`
-			html = html + `<div class="number_players">${match.players.length} player${match.players.length > 1 ? "s" : ""}</div><div class="match">`
+			html = html + `<div class="match"><div class="match_time">${match.schedule}</div>`
+			html = html + `<div class="number_players">${match.players.length} player${match.players.length > 1 ? "s" : ""}</div><div class="match_content">`
 			html = html + `<div class="match_name"><a href="${match.link}">${match.name}</a></div>`
 			html = html + `<div class="match_players">`
 			for (let o = 0; o < match.players.length; o++) {
 				html = html + `<img src=${match.players[o].flag}><a href="https://osu.ppy.sh/users/${match.players[o].id}">${match.players[o].name}</a>`
 				if (o+1 != match.players.length) {html = html + " | "}
 			}
-			html = html + "</div></div>"
+			html = html + "</div></div></div>"
 		}
 		html = html + "</div></div>"
 	}

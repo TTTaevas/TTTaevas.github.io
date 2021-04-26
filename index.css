@@ -75,7 +75,7 @@ img {
 	font-weight: bold;
 }
 
-.match {
+.match_content {
 	position: relative;
 	border-bottom: 1px solid;
 	padding: 1vmax 0.5vmax 0.7vmax 0.5vmax;
