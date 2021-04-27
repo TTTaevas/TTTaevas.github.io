@@ -48,7 +48,11 @@ class Flag {
 }
 
 function resetStats(matches) {
-	if (document.getElementById("statistics")) {document.getElementById("statistics").remove()}
+	let old_display = null
+	if (document.getElementById("statistics")) {
+		old_display = document.getElementById("statistics").style.display
+		document.getElementById("statistics").remove()
+	}
 
 	var limit
 	var statistics = document.createElement("div")
@@ -114,5 +118,6 @@ function resetStats(matches) {
 
 	statistics.appendChild(flag_appearances)
 
-	document.body.appendChild(statistics)
+	document.body.insertBefore(statistics, document.getElementsByClassName("search")[0])
+	if (old_display != null) {document.getElementById("statistics").style.display = old_display}
 }

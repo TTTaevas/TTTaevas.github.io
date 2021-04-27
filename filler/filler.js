@@ -80,7 +80,7 @@ async function buildWebpage() {
 		// Tourney details
 		html = html + `<div class="tournament"><div class="details"><div class="tourney_name"><a href="${tournaments[i].forum}">${tournaments[i].name}</a></div>`
 		html = html + `<div class="schedule">${tournaments[i].schedule[0].getMonth()+1}/${tournaments[i].schedule[0].getDate()}/${tournaments[i].schedule[0].getFullYear()} - ${tournaments[i].schedule[1].getMonth()+1}/${tournaments[i].schedule[1].getDate()}/${tournaments[i].schedule[1].getFullYear()}</div>`
-		html = html + `<div class="number_matches">Reffed ${tournaments[i].matches.length} match${tournaments[i].matches.length > 1 ? "es" : ""}</div></div><div class="matches">`
+		html = html + `<div class="number_matches"></div></div><div class="matches">`
 
 		// Tourney matches
 		for (let e = 0; e < tournaments[i].matches.length; e++) {
@@ -155,7 +155,7 @@ async function get(type, additional) {
 }
 
 var html = '<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">'
-html = html + '<title>Matches reffed by Taevas</title><link rel="stylesheet" type="text/css" href="./index.css"><script type="text/javascript" src="./search.js"></script></head><body onload="search(``)"><header><h1>Matches reffed by Taevas</h1></header>'
-html = html + '<input type="text" class="search" placeholder="Look for a player..." oninput="search(this.value.toLowerCase())"><p id="number_results"></p>'
+html = html + '<title>Matches reffed by Taevas</title><link rel="stylesheet" type="text/css" href="./index.css"><script type="text/javascript" src="./search.js"></script><script type="text/javascript" src="./show_stats.js"></script></head><body onload="search(``)"><header><h1>Matches reffed by Taevas</h1></header>'
+html = html + '<input type="text" class="search" placeholder="Look for a player..." oninput="search(this.value.toLowerCase())"><p id="number_results"></p><button type="button" id="show_stats" onclick="show_stats()">Show Stats</button><button type="button" id="hide_stats" onclick="hide_stats()">Hide Stats</button>'
 
 buildWebpage(html)

@@ -1,5 +1,6 @@
 html {
-	background-color: #170A08;
+	background-color: #130904;
+	/* background-image: linear-gradient(90deg, #170A08, black, #170A08); idk yet */
 	color: #C154A3;
 	font-family: Arial;
 	text-align: center;
@@ -33,8 +34,16 @@ h1 {
 	text-align: center;
 }
 
-#number_results {
-
+button {
+	background-color: #C154A3;
+	color: black; 
+	border: 2px solid black;
+	padding: 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 17px;
+	cursor: pointer;
 }
 
 h3 {
@@ -103,31 +112,30 @@ img {
 	}
 }
 
-#statistics {
-	position: relative;
+#hide_stats {
+	display: none;
 }
 
-@media screen and (max-width: 700px) {
-	#statistics {
+#statistics {
+	display: none;
+	width: 100%;
+	flex-direction: row;
+	justify-content: center;
+}
+
+@media screen and (max-width: 500px) {
+	button {
 		display: none;
 	}
 }
 
 #player_appearances, #flag_appearances {
-	position: absolute;
 	top: 1vmax;
 	width: 20vmax;
 	min-width: 200px;
 	border: 3px white solid;
 	font-weight: bold;
-}
-
-#player_appearances {
-	left: 10vmax;
-}
-
-#flag_appearances {
-	right: 10vmax;
+	margin: 0px 1vmax 2vmax 1vmax;
 }
 
 .row {
