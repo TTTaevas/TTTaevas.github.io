@@ -16,12 +16,19 @@ function search(str) {
 
 	let tournaments = document.getElementsByClassName("tournament")
 	for (let i = 0; i < tournaments.length; i++) {
+		let matches_shown = 0
 		let to_hide = true
 
 		let tournament_matches = tournaments[i].getElementsByClassName("matches")[0].getElementsByClassName("match")
 		for (let e = 0; e < tournament_matches.length; e++) {
-			if (tournament_matches[e].style.display != "none") {to_hide = false}
+			if (tournament_matches[e].style.display != "none") {
+				matches_shown++
+				to_hide = false
+			}
 		}
+
+		tournaments[i].getElementsByClassName("number_matches")[0].textContent = `${tournaments[i].getElementsByClassName("match").length} match${tournaments[i].getElementsByClassName("match").length > 1 ? "es" : ""}`
+		tournaments[i].getElementsByClassName("number_matches")[0].textContent += ` (${matches_shown} shown)`
 				
 		tournaments[i].style.display = to_hide ? "none" : "block"
 	}

@@ -84,6 +84,14 @@ img {
 	font-weight: bold;
 }
 
+.schedule {
+	padding-bottom: 0px;
+}
+
+.number_matches {
+	padding-top: 0px;
+}
+
 .match_content {
 	position: relative;
 	border-bottom: 1px solid;
