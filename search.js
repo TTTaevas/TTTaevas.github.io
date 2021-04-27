@@ -75,6 +75,7 @@ function resetStats(matches) {
 	}
 
 	players.sort((player1, player2) => player2.appearances - player1.appearances)
+	document.getElementById("number_results").textContent += ` and ${players.length} player${players.length > 1 ? "s" : ""}`
 
 	limit = players.length <= 10 ? players.length : 10
 	for (let i = 0; i < limit; i++) {
