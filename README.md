@@ -14,7 +14,7 @@ Statistics about the matches that are shown can be found at the bottom of the we
 
 ## How to make your own
 
-Fork this, change the project name (`tttaevas` to `your_github_username`), clone your project, add a `.env` file and add to it `osu_api_key=` plus your [osu! api key](https://osu.ppy.sh/p/api/). **Be careful to not make your key visible by all!**
+Click the "Use this template" button, name your project `<your_github_username>.github.io`, clone your project, add a `.env` file and add to it `osu_api_key=` plus your [osu! api key](https://osu.ppy.sh/p/api/). **Be careful to not make your key visible by all!**
 
 In the `filler.js` file in the `filler` folder, you can find the `new_tournaments` array. You simply need to change it accordingly to your reffing experience!
 
