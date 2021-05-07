@@ -52,7 +52,7 @@ async function buildWebpage() {
 		[78513180, 78615645, 78618985, 78692074, 79303835, 79317324, 79844339, 79849442, 79946482, 79962520, 79973768, 80467449, 80512103, 80512148, 81037578, 81186624, 81667185, 82273027]],
 
 		["Miyu's Flower Run 2021", "https://osu.ppy.sh/community/forums/topics/1261786", [new Date(2021, 3, 10), new Date(2021, 4, 29)],
-		[80466676, 80561256, 80567323, 80575071, 81076238, 81087809, 81087857, 81098822, 81119664, 81171482, 81595155, 81595188, 81673733, 81680736, 81756133, 81758533, 82278694, 82318642, 82528114]],
+		[80466676, 80561256, 80567323, 80575071, 81076238, 81087809, 81087857, 81098822, 81119664, 81171482, 81595155, 81595188, 81673733, 81680736, 81756133, 81758533, 82278694, 82318642, 82528114, 82760546]],
 
 		["osu! Malaysia Amateur Tournament 2nd Edition", "https://osu.ppy.sh/community/forums/topics/1247275", [new Date(2021, 2, 5), new Date(2021, 3, 25)],
 		[80465632, 80476682, 80563350, 81088133, 81181496, 81253559, 81679597]],
@@ -64,7 +64,21 @@ async function buildWebpage() {
 		[81096777]],
 
 		["Melody Tournament", "https://osu.ppy.sh/community/forums/topics/1279911", [new Date(2021, 3, 18), new Date(2021, 3, 18)],
-		[81205136, 81210349, 81213299]]
+		[81205136, 81210349, 81213299]],
+
+		["Triple Trouble II", "https://osu.ppy.sh/community/forums/topics/1295530", [new Date(2021, 3, 30), new Date(2021, 5, 6)],
+		[]],
+
+		["Catch French Dual Tournament", "https://osu.ppy.sh/community/forums/topics/1295530", [new Date(2021, 4, 8), new Date(2021, 5, 5)],
+		[]],
+
+		["Wallons vs Vlaams", "https://osu.ppy.sh/community/forums/topics/1287817", [new Date(2021, 4, 8), new Date(2021, 5, 6)],
+		[82754529]],
+
+		["Epic Fumo Tournament 1", "https://osu.ppy.sh/community/forums/topics/1303398", [new Date(2021, 4, 8), new Date(2021, 5, 28)],
+		[]]
+
+		// the whitecat tournament situation is still confusing lol
 
 	]
 	// CHANGE DETAILS ABOVE
