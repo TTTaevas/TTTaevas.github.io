@@ -75,7 +75,7 @@ function resetStats(matches) {
 			for (let e = 0; e < match_players.length; e++) {
 				let to_add = true
 				for (let o = 0; o < players.length; o++) {
-					if (match_players[e].innerHTML == players[o].name) {
+					if (match_players[e].href == players[o].link) {
 						to_add = false
 						players[o].appearances++
 					}

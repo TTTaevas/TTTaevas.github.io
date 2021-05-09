@@ -105,7 +105,7 @@ async function buildWebpage() {
 			html = html + `<div class="match_name"><a href="${match.link}">${match.name}</a></div>`
 			html = html + `<div class="match_players">`
 			for (let o = 0; o < match.players.length; o++) {
-				html = html + `<img src=${match.players[o].flag}><a href="https://osu.ppy.sh/users/${match.players[o].id}">${match.players[o].name}</a>`
+				html = html + `<div class="player"><img src=${match.players[o].flag}><a href="https://osu.ppy.sh/users/${match.players[o].id}">${match.players[o].name}</a></div>`
 				if (o+1 != match.players.length) {html = html + " | "}
 			}
 			html = html + "</div></div></div>"

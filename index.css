@@ -98,6 +98,10 @@ img {
 	padding: 1vmax 0.5vmax 0.7vmax 0.5vmax;
 }
 
+.player {
+	display: inline-block;
+}
+
 .match_time {
 	position: absolute;
 	padding: 5px;
