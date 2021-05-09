@@ -52,7 +52,7 @@ async function buildWebpage() {
 		[78513180, 78615645, 78618985, 78692074, 79303835, 79317324, 79844339, 79849442, 79946482, 79962520, 79973768, 80467449, 80512103, 80512148, 81037578, 81186624, 81667185, 82273027]],
 
 		["Miyu's Flower Run 2021", "https://osu.ppy.sh/community/forums/topics/1261786", [new Date(2021, 3, 10), new Date(2021, 4, 29)],
-		[80466676, 80561256, 80567323, 80575071, 81076238, 81087809, 81087857, 81098822, 81119664, 81171482, 81595155, 81595188, 81673733, 81680736, 81756133, 81758533, 82278694, 82318642, 82528114, 82760546]],
+		[80466676, 80561256, 80567323, 80575071, 81076238, 81087809, 81087857, 81098822, 81119664, 81171482, 81595155, 81595188, 81673733, 81680736, 81756133, 81758533, 82278694, 82318642, 82528114, 82760546, 82800070, 82867107, 82887600]],
 
 		["osu! Malaysia Amateur Tournament 2nd Edition", "https://osu.ppy.sh/community/forums/topics/1247275", [new Date(2021, 2, 5), new Date(2021, 3, 25)],
 		[80465632, 80476682, 80563350, 81088133, 81181496, 81253559, 81679597]],
@@ -76,7 +76,7 @@ async function buildWebpage() {
 		[82754529]],
 
 		["Epic Fumo Tournament 1", "https://osu.ppy.sh/community/forums/topics/1303398", [new Date(2021, 4, 8), new Date(2021, 5, 28)],
-		[]]
+		[82836658, 82850037, 82887292]]
 
 		// the whitecat tournament situation is still confusing lol
 
@@ -142,14 +142,14 @@ async function addMatch(name, mp_id) {
 		}
 	}
 	console.log(`(${counter}) ${name}: GETTING PLAYERS FOR MATCH ${mp_id}`)
-	const players = await Promise.all(await players_ids.map(async player_id => await addPlayer(player_id)))
+	const players = await Promise.all(await players_ids.map(async player_id => await addPlayer(player_id).catch((e) => console.log("An error happened: ", e))))
 	return new Match(match.match.name, match.match.match_id, players, start)
 }
 
 async function addPlayer(player_id) {
 	let player = await get("get_user", `u=${player_id}`)
 	player = player[0]
-	return new Player(player.user_id, player.username, player.country)
+	return player != undefined ? new Player(player.user_id, player.username, player.country) : new Player(player_id, "BANNED_USER", "CX")
 }
 
 async function get(type, additional) {
