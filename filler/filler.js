@@ -67,10 +67,10 @@ async function buildWebpage() {
 		[81205136, 81210349, 81213299]],
 
 		["Triple Trouble II", "https://osu.ppy.sh/community/forums/topics/1295530", [new Date(2021, 3, 30), new Date(2021, 5, 6)],
-		[82927626, 82936546, 82936584, 82961866]],
+		[82927626, 82936546, 82936584, 82961866, 83394573]],
 
 		["Catch French Dual Tournament", "https://osu.ppy.sh/community/forums/topics/1295530", [new Date(2021, 4, 8), new Date(2021, 5, 5)],
-		[]],
+		[83401025]],
 
 		["Wallons vs Vlaams", "https://osu.ppy.sh/community/forums/topics/1287817", [new Date(2021, 4, 8), new Date(2021, 5, 6)],
 		[82754529]],
