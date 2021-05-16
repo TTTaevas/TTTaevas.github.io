@@ -67,18 +67,19 @@ async function buildWebpage() {
 		[81205136, 81210349, 81213299]],
 
 		["Triple Trouble II", "https://osu.ppy.sh/community/forums/topics/1295530", [new Date(2021, 3, 30), new Date(2021, 5, 6)],
-		[82927626, 82936546, 82936584, 82961866, 83394573]],
+		[82927626, 82936546, 82936584, 82961866, 83394573, 83483868, 83487536]],
 
 		["Catch French Dual Tournament", "https://osu.ppy.sh/community/forums/topics/1295530", [new Date(2021, 4, 8), new Date(2021, 5, 5)],
-		[83401025]],
+		[83401025, 83477551, 83480808, 83484015]],
 
 		["Wallons vs Vlaams", "https://osu.ppy.sh/community/forums/topics/1287817", [new Date(2021, 4, 8), new Date(2021, 5, 6)],
 		[82754529]],
 
 		["Epic Fumo Tournament 1", "https://osu.ppy.sh/community/forums/topics/1303398", [new Date(2021, 4, 8), new Date(2021, 5, 28)],
-		[82836658, 82850037, 82887292, 82923218, 82927562, 82940037, 82965284]]
+		[82836658, 82850037, 82887292, 82923218, 82927562, 82940037, 82965284]],
 
-		// the whitecat tournament situation is still confusing lol
+		["WhiteCat Official Osu! Tournament Low Tier", "https://osu.ppy.sh/community/forums/topics/1298947", [new Date(2021, 4, 15), new Date(2021, 6, 18)], //Temp date
+		[83477371, 83477438]],
 
 	]
 	// CHANGE DETAILS ABOVE
