@@ -87,7 +87,7 @@ async function buildWebpage() {
 		[83477371, 83477438, 84518793, 84565637, 84569132]],
 
 		["WhiteCat Official Osu! Tournament Mid Tier", "https://osu.ppy.sh/community/forums/topics/1298947", [new Date(2021, 4, 29), new Date(2021, 6, 31)], //Temp date
-		[84567139]],
+		[84567139, 84906677, 84907634]],
 
 		["finnish duo cup", "https://osu.ppy.sh/community/forums/topics/1313956", [new Date(2021, 4, 28), new Date(2021, 6, 11)],
 		[84562646, 84565561, 84569390]],
