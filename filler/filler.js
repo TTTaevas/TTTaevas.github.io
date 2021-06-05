@@ -72,7 +72,7 @@ async function buildWebpage() {
 		[82927626, 82936546, 82936584, 82961866, 83394573, 83483868, 83487536]],
 
 		["Catch French Dual Tournament", "https://osu.ppy.sh/community/forums/topics/1295530", [new Date(2021, 4, 8), new Date(2021, 5, 5)],
-		[83401025, 83477551, 83480808, 83484015, 83956893]],
+		[83401025, 83477551, 83480808, 83484015, 83956893, 84975189]],
 
 		["Wallons vs Vlaams", "https://osu.ppy.sh/community/forums/topics/1287817", [new Date(2021, 4, 8), new Date(2021, 5, 6)],
 		[82754529]],
@@ -91,6 +91,12 @@ async function buildWebpage() {
 
 		["finnish duo cup", "https://osu.ppy.sh/community/forums/topics/1313956", [new Date(2021, 4, 28), new Date(2021, 6, 11)],
 		[84562646, 84565561, 84569390]],
+
+		["SEA Summer Suiji Showdown", "https://osu.ppy.sh/community/forums/topics/1306172", [new Date(2021, 4, 29), new Date(2021, 6, 11)],
+		[84968081]],
+
+		["osu!Malaysia Tournament 2021", "https://osu.ppy.sh/community/forums/topics/1311342", [new Date(2021, 5, 5), new Date(2021, 6, 25)],
+		[84975240, 84978259]],
 
 	]
 	// CHANGE DETAILS ABOVE
