@@ -78,16 +78,16 @@ async function buildWebpage() {
 		[82754529]],
 
 		["Epic Fumo Tournament 1", "https://osu.ppy.sh/community/forums/topics/1303398", [new Date(2021, 4, 8), new Date(2021, 5, 28)],
-		[82836658, 82850037, 82887292, 82923218, 82927562, 82940037, 82965284, 83962031, 83963219, 84550232, 84615199]],
+		[82836658, 82850037, 82887292, 82923218, 82927562, 82940037, 82965284, 83962031, 83963219, 84550232, 84615199, 85042304]],
 
 		["osu!mania Malaysia Tournament", "https://osu.ppy.sh/community/forums/topics/1301065", [new Date(2021, 4, 14), new Date(2021, 5, 27)],
 		[84553995, 84556681]],
 
 		["WhiteCat Official Osu! Tournament Low Tier", "https://osu.ppy.sh/community/forums/topics/1298947", [new Date(2021, 4, 15), new Date(2021, 6, 18)], //Temp date
-		[83477371, 83477438, 84518793, 84565637, 84569132]],
+		[83477371, 83477438, 84518793, 84565637, 84569132, 85046268, 85048839]],
 
 		["WhiteCat Official Osu! Tournament Mid Tier", "https://osu.ppy.sh/community/forums/topics/1298947", [new Date(2021, 4, 29), new Date(2021, 6, 31)], //Temp date
-		[84567139, 84906677, 84907634]],
+		[84567139, 84906677, 84907634, 85041110]],
 
 		["finnish duo cup", "https://osu.ppy.sh/community/forums/topics/1313956", [new Date(2021, 4, 28), new Date(2021, 6, 11)],
 		[84562646, 84565561, 84569390]],
@@ -96,7 +96,7 @@ async function buildWebpage() {
 		[84968081]],
 
 		["osu!Malaysia Tournament 2021", "https://osu.ppy.sh/community/forums/topics/1311342", [new Date(2021, 5, 5), new Date(2021, 6, 25)],
-		[84975240, 84978259]],
+		[84975240, 84978259, 85046069, 85048991]],
 
 	]
 	// CHANGE DETAILS ABOVE
