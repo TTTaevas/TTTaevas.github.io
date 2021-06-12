@@ -74,14 +74,17 @@ async function buildWebpage() {
 		["Catch French Dual Tournament", "https://osu.ppy.sh/community/forums/topics/1295530", [new Date(2021, 4, 8), new Date(2021, 5, 5)],
 		[83401025, 83477551, 83480808, 83484015, 83956893, 84975189]],
 
-		["Wallons vs Vlaams", "https://osu.ppy.sh/community/forums/topics/1287817", [new Date(2021, 4, 8), new Date(2021, 5, 6)],
-		[82754529]],
+		["Wallons vs Vlaams", "https://osu.ppy.sh/community/forums/topics/1287817", [new Date(2021, 4, 8), new Date(2021, 5, 6)], //unsure about date lol
+		[82754529]], //actually, I'm unsure about everything concerning this tournament, at this point
 
 		["Epic Fumo Tournament 1", "https://osu.ppy.sh/community/forums/topics/1303398", [new Date(2021, 4, 8), new Date(2021, 5, 28)],
 		[82836658, 82850037, 82887292, 82923218, 82927562, 82940037, 82965284, 83962031, 83963219, 84550232, 84615199, 85042304]],
 
 		["osu!mania Malaysia Tournament", "https://osu.ppy.sh/community/forums/topics/1301065", [new Date(2021, 4, 14), new Date(2021, 5, 27)],
 		[84553995, 84556681]],
+
+		["Unicornlover's Scuffed Osu Tournament", "https://osu.ppy.sh/community/forums/topics/1312008", [new Date(2021, 4, 28), new Date(2021, 6, 11)],
+		[85439410]],
 
 		["WhiteCat Official Osu! Tournament Low Tier", "https://osu.ppy.sh/community/forums/topics/1298947", [new Date(2021, 4, 15), new Date(2021, 6, 18)], //Temp date
 		[83477371, 83477438, 84518793, 84565637, 84569132, 85046268, 85048839, 85122411]],
@@ -99,10 +102,10 @@ async function buildWebpage() {
 		[84968081]],
 
 		["osu!Malaysia Tournament 2021", "https://osu.ppy.sh/community/forums/topics/1311342", [new Date(2021, 5, 5), new Date(2021, 6, 25)],
-		[84975240, 84978259, 85046069, 85048991, 85367477, 85367550, 85373945, 85374022]],
+		[84975240, 84978259, 85046069, 85048991, 85367477, 85367550, 85373945, 85374022, 85436469]],
 
 		["South African osu! Tournament 3", "https://osu.ppy.sh/community/forums/topics/1293423", [new Date(2021, 5, 11), new Date(2021, 6, 24)],
-		[85365151, 85403449]],
+		[85365151, 85403449, 85436437, 85439172]],
 
 	]
 	// CHANGE DETAILS ABOVE
