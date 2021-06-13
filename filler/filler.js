@@ -105,8 +105,10 @@ async function buildWebpage() {
 		[84975240, 84978259, 85046069, 85048991, 85367477, 85367550, 85373945, 85374022, 85436469]],
 
 		["South African osu! Tournament 3", "https://osu.ppy.sh/community/forums/topics/1293423", [new Date(2021, 5, 11), new Date(2021, 6, 24)],
-		[85365151, 85403449, 85436437, 85439172]],
+		[85365151, 85403449, 85436437, 85439172, 85529600, 85532044]],
 
+		["5 Digit Joker Cup", "https://osu.ppy.sh/community/forums/topics/1309821", [new Date(2021, 5, 11), new Date(2021, 7, 4)],
+		[85501268, 85512213, 85512301]],
 	]
 	// CHANGE DETAILS ABOVE
 
