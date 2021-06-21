@@ -68,7 +68,7 @@ async function buildWebpage() {
 		["Melody Tournament", "https://osu.ppy.sh/community/forums/topics/1279911", [new Date(2021, 3, 18), new Date(2021, 3, 18)],
 		[81205136, 81210349, 81213299]],
 
-		["Triple Trouble II", "https://osu.ppy.sh/community/forums/topics/1295530", [new Date(2021, 3, 30), new Date(2021, 5, 13)],
+		["Triple Trouble II", "https://osu.ppy.sh/community/forums/topics/1295530", [new Date(2021, 3, 30), new Date(2021, 5, 26)], //GF has been delayed a lot, I think?
 		[82927626, 82936546, 82936584, 82961866, 83394573, 83483868, 83487536]],
 
 		["Catch French Dual Tournament", "https://osu.ppy.sh/community/forums/topics/1295530", [new Date(2021, 4, 8), new Date(2021, 5, 5)],
@@ -100,6 +100,9 @@ async function buildWebpage() {
 
 		["SEA Summer Suiji Showdown", "https://osu.ppy.sh/community/forums/topics/1306172", [new Date(2021, 4, 29), new Date(2021, 6, 11)],
 		[84968081, 85878215]],
+
+		["La provençale 2021", "https://osu.ppy.sh/community/forums/topics/1313094", [new Date(2021, 5, 5), new Date(2021, 6, 11)],
+		[85940842]],
 
 		["osu!Malaysia Tournament 2021", "https://osu.ppy.sh/community/forums/topics/1311342", [new Date(2021, 5, 5), new Date(2021, 6, 25)],
 		[84975240, 84978259, 85046069, 85048991, 85367477, 85367550, 85373945, 85374022, 85436469]],
