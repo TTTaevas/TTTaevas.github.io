@@ -35,7 +35,7 @@ function search(str) {
 	
 	document.getElementById("number_results").textContent = `${number_results} match${number_results > 1 ? "es" : ""}`
 
-	resetStats(matches)
+	resetStats(matches, 10, 10)
 }
 
 class Player {
@@ -54,7 +54,7 @@ class Flag {
 	}
 }
 
-function resetStats(matches) {
+function resetStats(matches, max_players, max_flags) {
 	let old_display = null
 	if (document.getElementById("statistics")) {
 		old_display = document.getElementById("statistics").style.display
@@ -88,7 +88,7 @@ function resetStats(matches) {
 	players.sort((player1, player2) => player2.appearances - player1.appearances)
 	document.getElementById("number_results").textContent += ` and ${players.length} player${players.length > 1 ? "s" : ""}`
 
-	limit = players.length <= 10 ? players.length : 10
+	limit = players.length <= max_players ? players.length : 10
 	for (let i = 0; i < limit; i++) {
 		let row = document.createElement("div")
 		row.className = "row"
@@ -114,8 +114,9 @@ function resetStats(matches) {
 	}
 
 	flags.sort((flag1, flag2) => flag2.appearances - flag1.appearances)
+	document.getElementById("number_results").textContent += ` across ${flags.length} ${flags.length > 1 ? "countries" : "country"}`
 
-	limit = flags.length <= 10 ? flags.length : 10 
+	limit = flags.length <= max_flags ? flags.length : 10 
 	for (let i = 0; i < limit; i++) {
 		let row = document.createElement("div")
 		row.className = "row"
