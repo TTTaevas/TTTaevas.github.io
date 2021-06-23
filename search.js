@@ -55,11 +55,35 @@ class Flag {
 }
 
 function resetStats(matches, max_players, max_flags) {
+	let nrf = document.getElementById("number_results")
+	nrf.textContent += " " // lol
+	nrf.textContent = nrf.textContent.substring(0, nrf.textContent.substring(5).indexOf(" ") + 5)
+
 	let old_display = null
-	if (document.getElementById("statistics")) {
-		old_display = document.getElementById("statistics").style.display
-		document.getElementById("statistics").remove()
+	if (document.getElementById("statistics_wrapper")) {
+		old_display = document.getElementById("statistics_wrapper").style.display
+		document.getElementById("statistics_wrapper").remove()
 	}
+
+	var statistics_wrapper = document.createElement("div")
+	statistics_wrapper.id = "statistics_wrapper"
+
+	var max_results = document.createElement("div")
+	max_results.id = "max_results"
+
+	let label_max_results = document.createElement("label")
+	let text_label_max_results = document.createTextNode("Max number of results:")
+	label_max_results.appendChild(text_label_max_results)
+	max_results.appendChild(label_max_results)
+
+	let max_results_field = document.createElement("input")
+	max_results_field.setAttribute("type", "number")
+	max_results_field.setAttribute("value", max_players)
+	max_results_field.setAttribute("onblur", `resetStats(document.getElementsByClassName("match"), Number(this.value), Number(this.value))`)
+	max_results_field.id = "max_results_field"
+	max_results.appendChild(max_results_field)
+
+	statistics_wrapper.appendChild(max_results)
 
 	var limit
 	var statistics = document.createElement("div")
@@ -88,7 +112,7 @@ function resetStats(matches, max_players, max_flags) {
 	players.sort((player1, player2) => player2.appearances - player1.appearances)
 	document.getElementById("number_results").textContent += ` and ${players.length} player${players.length > 1 ? "s" : ""}`
 
-	limit = players.length <= max_players ? players.length : 10
+	limit = players.length <= max_players ? players.length : max_players
 	for (let i = 0; i < limit; i++) {
 		let row = document.createElement("div")
 		row.className = "row"
@@ -116,7 +140,7 @@ function resetStats(matches, max_players, max_flags) {
 	flags.sort((flag1, flag2) => flag2.appearances - flag1.appearances)
 	document.getElementById("number_results").textContent += ` across ${flags.length} ${flags.length > 1 ? "countries" : "country"}`
 
-	limit = flags.length <= max_flags ? flags.length : 10 
+	limit = flags.length <= max_flags ? flags.length : max_flags
 	for (let i = 0; i < limit; i++) {
 		let row = document.createElement("div")
 		row.className = "row"
@@ -125,7 +149,8 @@ function resetStats(matches, max_players, max_flags) {
 	}
 
 	statistics.appendChild(flag_appearances)
+	statistics_wrapper.appendChild(statistics)
 
-	document.body.insertBefore(statistics, document.getElementsByClassName("search")[0])
-	if (old_display != null) {document.getElementById("statistics").style.display = old_display}
+	document.body.insertBefore(statistics_wrapper, document.getElementsByClassName("search")[0])
+	if (old_display != null) {document.getElementById("statistics_wrapper").style.display = old_display}
 }
