@@ -9,7 +9,11 @@ class Tournament {
 	constructor(name, forum, schedule, matches) {
 		this.name = name
 		this.forum = forum
-		this.schedule = schedule
+		this.schedule = schedule.map(date => {
+			let a = [date.getFullYear(), date.getMonth()+1, date.getDate()]
+			a.forEach(function(b, c) {if (b.toString().length < 2) {a[c] = `0${b}`}})
+			return `${a[0]}-${a[1]}-${a[2]}`
+		})
 		this.matches = matches
 	}
 }
@@ -19,7 +23,7 @@ class Match {
 		this.name = name
 		this.link = `https://osu.ppy.sh/community/matches/${id}`
 		this.players = players
-		this.schedule = `${schedule.substring(5, 7)}/${schedule.substring(8, 10)}/${schedule.substring(0, 4)}`
+		this.schedule = schedule.substring(0, 10)
 	}
 }
 
@@ -125,7 +129,7 @@ async function buildWebpage() {
 	for (let i = 0; i < tournaments.length; i++) {
 		// Tourney details
 		html = html + `<div class="tournament"><div class="details"><div class="tourney_name"><a href="${tournaments[i].forum}">${tournaments[i].name}</a></div>`
-		html = html + `<div class="schedule">${tournaments[i].schedule[0].getMonth()+1}/${tournaments[i].schedule[0].getDate()}/${tournaments[i].schedule[0].getFullYear()} - ${tournaments[i].schedule[1].getMonth()+1}/${tournaments[i].schedule[1].getDate()}/${tournaments[i].schedule[1].getFullYear()}</div>`
+		html = html + `<div class="schedule">From ${tournaments[i].schedule[0]} to ${tournaments[i].schedule[1]}</div>`
 		html = html + `<div class="number_matches"></div></div><div class="matches">`
 
 		// Tourney matches
