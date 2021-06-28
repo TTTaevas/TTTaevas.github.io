@@ -103,7 +103,7 @@ async function buildWebpage() {
 		[84562646, 84565561, 84569390]],
 
 		["SEA Summer Suiji Showdown", "https://osu.ppy.sh/community/forums/topics/1306172", [new Date(2021, 4, 29), new Date(2021, 6, 11)],
-		[84968081, 85878215, 86303018]],
+		[84968081, 85878215, 86303018, 86364088, 86369581]],
 
 		["La provençale 2021", "https://osu.ppy.sh/community/forums/topics/1313094", [new Date(2021, 5, 5), new Date(2021, 6, 11)],
 		[85940842]],
