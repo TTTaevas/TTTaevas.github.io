@@ -28,10 +28,11 @@ class Match {
 }
 
 class Player {
-	constructor(id, name, flag) {
+	constructor(id, name, flag, rank) {
 		this.id = id
 		this.name = name
 		this.flag = `https://osu.ppy.sh/images/flags/${flag}.png`
+		this.rank = rank
 	}
 }
 
@@ -72,14 +73,11 @@ async function buildWebpage() {
 		["Melody Tournament", "https://osu.ppy.sh/community/forums/topics/1279911", [new Date(2021, 3, 18), new Date(2021, 3, 18)],
 		[81205136, 81210349, 81213299]],
 
-		["Triple Trouble II", "https://osu.ppy.sh/community/forums/topics/1295530", [new Date(2021, 3, 30), new Date(2021, 5, 26)], //GF has been delayed a lot, I think?
+		["Triple Trouble II", "https://osu.ppy.sh/community/forums/topics/1295530", [new Date(2021, 3, 30), new Date(2021, 5, 27)],
 		[82927626, 82936546, 82936584, 82961866, 83394573, 83483868, 83487536]],
 
 		["Catch French Dual Tournament", "https://osu.ppy.sh/community/forums/topics/1295530", [new Date(2021, 4, 8), new Date(2021, 5, 5)],
 		[83401025, 83477551, 83480808, 83484015, 83956893, 84975189]],
-
-		["Wallons vs Vlaams", "https://osu.ppy.sh/community/forums/topics/1287817", [new Date(2021, 4, 8), new Date(2021, 5, 6)], //unsure about date lol
-		[82754529]], //actually, I'm unsure about everything concerning this tournament, at this point, may remove it from the website
 
 		["Epic Fumo Tournament 1", "https://osu.ppy.sh/community/forums/topics/1303398", [new Date(2021, 4, 8), new Date(2021, 5, 28)],
 		[82836658, 82850037, 82887292, 82923218, 82927562, 82940037, 82965284, 83962031, 83963219, 84550232, 84615199, 85042304]],
@@ -90,13 +88,13 @@ async function buildWebpage() {
 		["Unicornlover's Scuffed Osu Tournament", "https://osu.ppy.sh/community/forums/topics/1312008", [new Date(2021, 4, 28), new Date(2021, 6, 11)],
 		[85439410, 85878346, 86303510]],
 
-		["WhiteCat Official Osu! Tournament Low Tier", "https://osu.ppy.sh/community/forums/topics/1298947", [new Date(2021, 4, 15), new Date(2021, 6, 18)], //Temp date
+		["WhiteCat Official Osu! Tournament Low Tier", "https://osu.ppy.sh/community/forums/topics/1298947", [new Date(2021, 4, 15), new Date(2021, 6, 11)],
 		[83477371, 83477438, 84518793, 84565637, 84569132, 85046268, 85048839, 85122411, 85877270]],
 
-		["WhiteCat Official Osu! Tournament Mid Tier", "https://osu.ppy.sh/community/forums/topics/1298947", [new Date(2021, 4, 29), new Date(2021, 6, 31)], //Temp date
+		["WhiteCat Official Osu! Tournament Mid Tier", "https://osu.ppy.sh/community/forums/topics/1298947", [new Date(2021, 4, 29), new Date(2021, 6, 18)],
 		[84567139, 84906677, 84907634, 85041110]],
 
-		["WhiteCat Official Osu! Tournament High Tier", "https://osu.ppy.sh/community/forums/topics/1298947", [new Date(2021, 5, 5), new Date(2021, 7, 6)], //Temp date
+		["WhiteCat Official Osu! Tournament High Tier", "https://osu.ppy.sh/community/forums/topics/1298947", [new Date(2021, 5, 5), new Date(2021, 6, 18)],
 		[]],
 
 		["finnish duo cup", "https://osu.ppy.sh/community/forums/topics/1313956", [new Date(2021, 4, 28), new Date(2021, 6, 11)],
@@ -114,8 +112,24 @@ async function buildWebpage() {
 		["South African osu! Tournament 3", "https://osu.ppy.sh/community/forums/topics/1293423", [new Date(2021, 5, 11), new Date(2021, 6, 24)],
 		[85365151, 85403449, 85436437, 85439172, 85529600, 85532044]],
 
-		["5 Digit Joker Cup", "https://osu.ppy.sh/community/forums/topics/1309821", [new Date(2021, 5, 11), new Date(2021, 7, 11)],
+		["5 Digit Joker Cup", "https://osu.ppy.sh/community/forums/topics/1309821", [new Date(2021, 5, 11), new Date(2021, 7, 18)],
 		[85501268, 85512213, 85512301, 86006107, 86006124]],
+
+		["osu!runnerUps 2021 Summer Showdown", "https://osu.ppy.sh/community/forums/topics/1342431", [new Date(2021, 6, 2), new Date(2021, 7, 15)], // I had no idea it was so soon lol
+		[]],
+
+		["Nightmare's Basic Tourney", "https://osu.ppy.sh/community/forums/topics/1328880", [new Date(2021, 6, 9), new Date(2021, 7, 22)],
+		[]],
+
+		["osu!catch Battle Royale Tournament", "https://osu.ppy.sh/community/forums/topics/1319593", [new Date(2021, 6, 10), new Date(2021, 7, 1)],
+		[]],
+
+		["Koro's Back 2 Skool Tournament", "https://osu.ppy.sh/community/forums/topics/1337953", [new Date(2021, 6, 17), new Date(2021, 7, 28)],
+		[]],
+
+		["osu! Romania Summer Tournament 2021", "https://osu.ppy.sh/community/forums/topics/1300582", [new Date(2021, 6, 20), new Date(2021, 8, 7)], // Hopefully they'll be speaking english, temp date btw
+		[]],
+
 	]
 	// CHANGE DETAILS ABOVE
 
@@ -141,7 +155,7 @@ async function buildWebpage() {
 			html = html + `<div class="match_name"><a href="${match.link}">${match.name}</a></div>`
 			html = html + `<div class="match_players">`
 			for (let o = 0; o < match.players.length; o++) {
-				html = html + `<div class="player"><img src=${match.players[o].flag}><a href="https://osu.ppy.sh/users/${match.players[o].id}">${match.players[o].name}</a></div>`
+				html = html + `<div class="player"><img src=${match.players[o].flag}><a href="https://osu.ppy.sh/users/${match.players[o].id}" title=${match.players[o].rank}>${match.players[o].name}</a></div>`
 				if (o+1 != match.players.length) {html = html + " | "}
 			}
 			html = html + "</div></div></div>"
@@ -185,7 +199,7 @@ async function addMatch(name, mp_id) {
 async function addPlayer(player_id) {
 	let player = await get("get_user", `u=${player_id}`)
 	player = player[0]
-	return player != undefined ? new Player(player.user_id, player.username, player.country) : new Player(player_id, "BANNED_USER", "CX")
+	return player != undefined ? new Player(player.user_id, player.username, player.country, player.pp_rank) : new Player(player_id, "BANNED_USER", "CX", Number.MAX_VALUE)
 }
 
 async function get(type, additional) {

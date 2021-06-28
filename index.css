@@ -52,7 +52,7 @@ h3 {
 }
 
 a {
-  color: hotpink;
+	color: hotpink;
 }
 
 img {
@@ -132,10 +132,6 @@ img {
 	display: none;
 }
 
-#max_results {
-	margin-bottom: 10px;
-}
-
 #max_results * {
 	margin: 6px;
 }
@@ -144,6 +140,10 @@ img {
 	border: solid 1px black;
 	width: 60px;
 	text-align: center;
+}
+
+#sort_by {
+	margin-bottom: 30px;
 }
 
 #statistics {
