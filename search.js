@@ -1,6 +1,5 @@
 function search(str) {
 	let number_results = 0
-	var sort_method
 
 	let matches = document.getElementsByClassName("match")
 	for (let i = 0; i < matches.length; i++) {
@@ -36,14 +35,7 @@ function search(str) {
 	
 	document.getElementById("number_results").textContent = `${number_results} match${number_results > 1 ? "es" : ""}`
 
-	if (document.getElementById("sort_by")) {
-		if (document.getElementById("appearances").checked) {sort_method = "appearances"}
-		else if (document.getElementById("ranks").checked) {sort_method = "ranks"}
-	} else {
-		sort_method = "appearances"
-	}
-
-	resetStats(matches, 10, 10, sort_method)
+	resetStats(matches, 10, 10, checkRadio())
 }
 
 class Player {
@@ -88,8 +80,7 @@ function resetStats(matches, max_players, max_flags, sort_method) {
 	let max_results_field = document.createElement("input")
 	max_results_field.setAttribute("type", "number")
 	max_results_field.setAttribute("value", max_players)
-	max_results_field.setAttribute("onblur", `resetStats(document.getElementsByClassName("match"), Number(this.value), Number(this.value),
-		document.getElementById("appearances").checked ? "appearances" : "ranks")`) // I'll figure out better code, search.js needs a rewrite
+	max_results_field.setAttribute("onblur", `resetStats(document.getElementsByClassName("match"), Number(this.value), Number(this.value), checkRadio())`)
 	max_results_field.id = "max_results_field"
 	max_results.appendChild(max_results_field)
 
@@ -104,36 +95,12 @@ function resetStats(matches, max_players, max_flags, sort_method) {
 	sort_by.appendChild(label_sort_by)
 
 	let sort_by_field = document.createElement("form")
+	sort_by_field.id = "sort_by_form"
 
-	let sort_by_one = document.createElement("input")
-	sort_by_one.setAttribute("type", "radio")
-	sort_by_one.setAttribute("id", "appearances")
-	sort_by_one.setAttribute("name", "sort")
-	sort_by_one.setAttribute("onclick", `resetStats(document.getElementsByClassName("match"), Number(max_results_field.value), Number(max_results_field.value),
-		document.getElementById("appearances").checked ? "appearances" : "ranks")`) // I'll figure out better code, search.js needs a rewrite
-	if (sort_method == "appearances") {sort_by_one.setAttribute("checked", true)}
-	sort_by_field.appendChild(sort_by_one)
-
-	let label_sort_by_one = document.createElement("label")
-	label_sort_by_one.setAttribute("for", "appearances")
-	let text_label_sort_by_one = document.createTextNode("Appearances")
-	label_sort_by_one.appendChild(text_label_sort_by_one)
-	sort_by_field.appendChild(label_sort_by_one)
-
-	let sort_by_two = document.createElement("input")
-	sort_by_two.setAttribute("type", "radio")
-	sort_by_two.setAttribute("id", "ranks")
-	sort_by_two.setAttribute("name", "sort")
-	sort_by_two.setAttribute("onclick", `resetStats(document.getElementsByClassName("match"), Number(max_results_field.value), Number(max_results_field.value),
-		document.getElementById("appearances").checked ? "appearances" : "ranks")`) // I'll figure out better code, search.js needs a rewrite
-	if (sort_method == "ranks") {sort_by_two.setAttribute("checked", true)}
-	sort_by_field.appendChild(sort_by_two)
-
-	let label_sort_by_two = document.createElement("label")
-	label_sort_by_two.setAttribute("for", "ranks")
-	let text_label_sort_by_two = document.createTextNode("osu! Ranks")
-	label_sort_by_two.appendChild(text_label_sort_by_two)
-	sort_by_field.appendChild(label_sort_by_two)
+	let sort_by_appearances = createRadio("sort", "appearances", sort_method)
+	sort_by_appearances.forEach(function(e) {sort_by_field.appendChild(e)})
+	let sort_by_ranks = createRadio("sort", "ranks", sort_method)
+	sort_by_ranks.forEach(function(e) {sort_by_field.appendChild(e)})
 
 	sort_by.appendChild(sort_by_field)
 	statistics_wrapper.appendChild(sort_by)
@@ -208,4 +175,33 @@ function resetStats(matches, max_players, max_flags, sort_method) {
 
 	document.body.insertBefore(statistics_wrapper, document.getElementsByClassName("search")[0])
 	if (old_display != null) {document.getElementById("statistics_wrapper").style.display = old_display}
+}
+
+function createRadio(name, id, checkedRadio) {
+	let a = document.createElement("input")
+	a.setAttribute("type", "radio")
+	a.setAttribute("name", name)
+	a.setAttribute("id", id)
+	a.setAttribute("onclick", `resetStats(document.getElementsByClassName("match"), Number(max_results_field.value), Number(max_results_field.value), id)`)
+	if (checkedRadio == id) {
+		a.setAttribute("checked", true)
+	}
+
+	let b = document.createElement("label")
+	b.setAttribute("for", id)
+	let b_text = document.createTextNode(id.replace(/^\w/, c => c.toUpperCase()))
+	b.appendChild(b_text)
+
+	return [a, b]
+}
+
+function checkRadio() {
+	if (document.getElementById("sort_by_form")) {
+		let radios = document.getElementById("sort_by_form").getElementsByTagName("input")
+		for (let i = 0; i < radios.length; i++) {
+			if (radios[i].checked) {return radios[i].id}
+		}
+	} else {
+		return "appearances"
+	}
 }
