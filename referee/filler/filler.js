@@ -79,7 +79,7 @@ async function buildWebpage() {
 		["Catch French Dual Tournament", "https://osu.ppy.sh/community/forums/topics/1295530", [new Date(2021, 4, 8), new Date(2021, 5, 5)],
 		[83401025, 83477551, 83480808, 83484015, 83956893, 84975189]],
 
-		["Epic Fumo Tournament 1", "https://osu.ppy.sh/community/forums/topics/1303398", [new Date(2021, 4, 8), new Date(2021, 5, 28)],
+		["Epic Fumo Tournament 1", "https://osu.ppy.sh/community/forums/topics/1303398", [new Date(2021, 4, 8), new Date(2021, 6, 6)],
 		[82836658, 82850037, 82887292, 82923218, 82927562, 82940037, 82965284, 83962031, 83963219, 84550232, 84615199, 85042304]],
 
 		["osu!mania Malaysia Tournament", "https://osu.ppy.sh/community/forums/topics/1301065", [new Date(2021, 4, 14), new Date(2021, 5, 27)],
@@ -104,7 +104,7 @@ async function buildWebpage() {
 		[84968081, 85878215, 86303018, 86364088, 86369581, 86710511]],
 
 		["La provençale 2021", "https://osu.ppy.sh/community/forums/topics/1313094", [new Date(2021, 5, 5), new Date(2021, 6, 11)],
-		[85940842]],
+		[85940842, 86893128]],
 
 		["osu!Malaysia Tournament 2021", "https://osu.ppy.sh/community/forums/topics/1311342", [new Date(2021, 5, 5), new Date(2021, 6, 25)],
 		[84975240, 84978259, 85046069, 85048991, 85367477, 85367550, 85373945, 85374022, 85436469]],

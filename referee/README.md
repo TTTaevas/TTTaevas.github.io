@@ -1,20 +1,20 @@
-# TTTaevas.github.io
+# TTTaevas.github.io/referee
 
-This is the website where all of the matches I have ever reffed on *osu!* are listed, along with the people who played in them.
+This is the webpage where all of the matches I have ever reffed on *osu!* are listed, along with the people who played in them.
 
 It features statistics for the matches shown, as well as a search bar so you can look for specific players.
 
 ## How to use
 
-Go to [tttaevas.github.io](https://tttaevas.github.io), and just look at the matches, lol
+Go to [tttaevas.github.io/referee](https://tttaevas.github.io/referee), and just look at the matches, lol
 
 You can use the search bar at the top to only show matches with specific players.
 
 Statistics about the matches that are shown can be found at the top of the webpage.
 
-## How to make your own
+## How to generate an index.html
 
-Click the "Use this template" button, name your project `<your_github_username>.github.io`, clone your project, add a `.env` file and add to it `osu_api_key=` plus your [osu! api key](https://osu.ppy.sh/p/api/). **Be careful to not make your key visible by all!**
+Add a `.env` file and add to it `osu_api_key=` plus your [osu! api key](https://osu.ppy.sh/p/api/).
 
 In the `filler.js` file in the `filler` folder, you can find the `new_tournaments` array. You simply need to change it according to your reffing experience!
 
@@ -27,4 +27,4 @@ Tournaments are represented by arrays within the `new_tournaments` array. Those 
 
 You will need to install dependencies before proceeding to the last step. In the `filler` folder, simply do `npm install`, if [npm](https://www.npmjs.com/) is installed! (if it's not installed, I recommend installing [Node.js](https://nodejs.org/), as it is needed and installs npm automatically)
 
-Once you're done with all that, you simply need to generate a new `index.html` by using the `node filler.js` command in the `filler` folder with [Node.js](https://nodejs.org/), then push a commit to your project!
+Once you're done with all that, you simply need to generate a new `index.html` by using the `node filler.js` command in the `filler` folder with [Node.js](https://nodejs.org/)!

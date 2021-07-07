@@ -1,177 +1,72 @@
+@font-face {
+	font-family: "Nunito";
+	src: url(Nunito-Regular.ttf) format("truetype");
+}
+
 html {
-	background-color: #130904;
-	/* background-image: linear-gradient(90deg, #170A08, black, #170A08); idk yet */
-	color: #C154A3;
-	font-family: Arial;
+	height: 100%;
 	text-align: center;
+	background-color: #130904;
+	background-image: linear-gradient(180deg, black 60%, #0B47AE);
+	color: blue;
 }
 
 body {
+	display: block;
 	margin: 0px;
+	height: 100%;
+	background-image:
+	radial-gradient(white, #0B47AE 0.3px, transparent 1px),
+	radial-gradient(white, #0B47AE 0.5px, transparent 2px),
+	radial-gradient(#0B47AE, #0B47AE 0.1px, transparent 2px);
+	background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px; 
+	background-position: 40px 80px, 130px 270px, 30px 200px;
 }
 
-header {
-	position: relative;
-	background-color: #C154A3;
-	color: #170A08;
-	border: black solid;
-	border-width: 0vmax 0.4vmax 0.4vmax 0.4vmax;
-	width: 50%;
+#buttons {
+	position: absolute;
+	top: 30%;
+	left: 10%;
+	right: 10%;
+	transform: translateY(-50%);
+	margin: 0px;
+	padding: 40px 0px;
+	list-style-type: none;
+	border: 1px solid #0B47AE;
+}
+
+li {
+	margin: 0px 50px;
 	padding: 10px;
-	margin: auto auto 2vmax auto;
-}
-
-h1 {
-	font-size: 4vmax;
-	margin-top: 0px;
-	margin-bottom: 0px;
-}
-
-.search {
-	border: solid 1px black;
-	font-size: 17px;
-	padding: 5px;
-	text-align: center;
+	max-height: 100%;
+	max-width: 100%;
 }
 
 button {
-	background-color: #C154A3;
-	color: black; 
-	border: 2px solid black;
-	padding: 10px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 17px;
+	transition: transform 0.1s;
+	text-transform: lowercase;
+	font-family: "Nunito", Arial;
+	font-size: calc(18px + 1.5vw);
+	margin: 0px;
+	padding: 15px;
+	width: 80%;
+	background-color: #000111;
+	color: #0B47AE;
+	border: 1px solid #0B47AE;
 	cursor: pointer;
 }
 
-h3 {
-	font-size: 7vmax;
-	margin: 1vmax auto auto auto;
+button:hover {
+	transform: scale(1.1);
 }
 
-a {
+#referee:hover {
 	color: hotpink;
+	border-color: hotpink;
 }
 
-img {
-	max-width: 30px;
-	margin-left: 0.1vmax;
-	margin-top: 1.2vmax;
-	margin-right: 0.2vmax;
+#sheeter:hover {
+	color: green;
+	border-color: green;
 }
 
-.tournament {
-	position: relative;
-	border: 2px solid white;
-	margin: 1vmax auto auto auto;
-	padding: 1vmax 0px 1vmax 0px;
-	width: 85%;
-}
-
-.details {
-	border-bottom: 1px white solid;
-	padding-bottom: 1vmax;
-}
-
-.details * {
-	padding: 0.2vmax;
-}
-
-.tourney_name {
-	font-size: calc(12px + 1.5vw);
-	font-weight: bold;
-}
-
-.schedule {
-	padding-bottom: 0px;
-}
-
-.number_matches {
-	padding-top: 0px;
-}
-
-.match_content {
-	position: relative;
-	border-bottom: 1px solid;
-	padding: 1vmax 0.5vmax 0.7vmax 0.5vmax;
-}
-
-.player {
-	display: inline-block;
-}
-
-.match_time {
-	position: absolute;
-	padding: 5px;
-}
-
-.number_players {
-	position: absolute;
-	right: 0;
-	padding: 5px;
-}
-
-.match_name {
-	font-size: calc(8px + 1.2vw);
-	font-weight: bold;
-}
-
-@media screen and (max-width: 1400px) {
-	.number_players, .match_time {
-		display: none;
-	}
-}
-
-#hide_stats {
-	display: none;
-}
-
-#statistics_wrapper {
-	display: none;
-}
-
-#max_results * {
-	margin: 6px;
-}
-
-#max_results_field {
-	border: solid 1px black;
-	width: 60px;
-	text-align: center;
-}
-
-#sort_by {
-	margin-bottom: 30px;
-}
-
-#statistics {
-	display: flex;
-	width: 100%;
-	flex-direction: row;
-	justify-content: center;
-}
-
-@media screen and (max-width: 500px) {
-	button {
-		display: none;
-	}
-}
-
-#player_appearances, #flag_appearances {
-	top: 1vmax;
-	width: 20vmax;
-	min-width: 200px;
-	border: 3px white solid;
-	font-weight: bold;
-	margin: 0px 1vmax 2vmax 1vmax;
-}
-
-.row {
-	padding: 6px;
-}
-
-.row img {
-	margin-top: 0px;
-}
