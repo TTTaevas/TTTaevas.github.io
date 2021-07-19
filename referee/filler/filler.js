@@ -85,7 +85,7 @@ async function buildWebpage() {
 		["osu!mania Malaysia Tournament", "https://osu.ppy.sh/community/forums/topics/1301065", [new Date(2021, 4, 14), new Date(2021, 5, 27)],
 		[84553995, 84556681]],
 
-		["Unicornlover's Scuffed Osu Tournament", "https://osu.ppy.sh/community/forums/topics/1312008", [new Date(2021, 4, 28), new Date(2021, 6, 11)],
+		["Unicornlover's Scuffed Osu Tournament", "https://osu.ppy.sh/community/forums/topics/1312008", [new Date(2021, 4, 28), new Date(2021, 6, 17)],
 		[85439410, 85878346, 86303510]],
 
 		["WhiteCat Official Osu! Tournament Low Tier", "https://osu.ppy.sh/community/forums/topics/1298947", [new Date(2021, 4, 15), new Date(2021, 6, 11)],
@@ -94,10 +94,7 @@ async function buildWebpage() {
 		["WhiteCat Official Osu! Tournament Mid Tier", "https://osu.ppy.sh/community/forums/topics/1298947", [new Date(2021, 4, 29), new Date(2021, 6, 18)],
 		[84567139, 84906677, 84907634, 85041110]],
 
-		["WhiteCat Official Osu! Tournament High Tier", "https://osu.ppy.sh/community/forums/topics/1298947", [new Date(2021, 5, 5), new Date(2021, 6, 18)],
-		[]],
-
-		["finnish duo cup", "https://osu.ppy.sh/community/forums/topics/1313956", [new Date(2021, 4, 28), new Date(2021, 6, 11)],
+		["finnish duo cup", "https://osu.ppy.sh/community/forums/topics/1313956", [new Date(2021, 4, 28), new Date(2021, 7, 1)], // ???????
 		[84562646, 84565561, 84569390]],
 
 		["SEA Summer Suiji Showdown", "https://osu.ppy.sh/community/forums/topics/1306172", [new Date(2021, 4, 29), new Date(2021, 6, 11)],
@@ -115,9 +112,6 @@ async function buildWebpage() {
 		["5 Digit Joker Cup", "https://osu.ppy.sh/community/forums/topics/1309821", [new Date(2021, 5, 11), new Date(2021, 7, 18)],
 		[85501268, 85512213, 85512301, 86006107, 86006124, 86655106, 86721037, 86721039, 86721452]],
 
-		["osu!runnerUps 2021 Summer Showdown", "https://osu.ppy.sh/community/forums/topics/1342431", [new Date(2021, 6, 2), new Date(2021, 7, 15)], // I had no idea it was so soon lol
-		[]],
-
 		["Nightmare's Basic Tourney", "https://osu.ppy.sh/community/forums/topics/1328880", [new Date(2021, 6, 9), new Date(2021, 7, 22)],
 		[]],
 
@@ -125,9 +119,9 @@ async function buildWebpage() {
 		[]],
 
 		["Koro's Back 2 Skool Tournament", "https://osu.ppy.sh/community/forums/topics/1337953", [new Date(2021, 6, 17), new Date(2021, 7, 28)],
-		[]],
+		[87612933, 87641253]],
 
-		["osu! Romania Summer Tournament 2021", "https://osu.ppy.sh/community/forums/topics/1300582", [new Date(2021, 6, 20), new Date(2021, 8, 7)], // Hopefully they'll be speaking english, temp date btw
+		["osu! Romania Summer Tournament 2021", "https://osu.ppy.sh/community/forums/topics/1300582", [new Date(2021, 6, 20), new Date(2021, 8, 7)],
 		[]],
 
 	]
