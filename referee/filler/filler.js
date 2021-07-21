@@ -122,7 +122,7 @@ async function buildWebpage() {
 		[87612933, 87641253]],
 
 		["osu! Romania Summer Tournament 2021", "https://osu.ppy.sh/community/forums/topics/1300582", [new Date(2021, 6, 20), new Date(2021, 8, 7)],
-		[]],
+		[87735546, 87750966, 87812622]],
 
 	]
 	// CHANGE DETAILS ABOVE
