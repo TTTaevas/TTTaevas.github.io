@@ -113,13 +113,13 @@ async function buildWebpage() {
 		[85501268, 85512213, 85512301, 86006107, 86006124, 86655106, 86721037, 86721039, 86721452]],
 
 		["Nightmare's Basic Tourney", "https://osu.ppy.sh/community/forums/topics/1328880", [new Date(2021, 6, 9), new Date(2021, 7, 22)],
-		[]],
+		[87989572, 88037613]],
 
-		["osu!catch Battle Royale Tournament", "https://osu.ppy.sh/community/forums/topics/1319593", [new Date(2021, 6, 10), new Date(2021, 7, 1)],
+		["osu!catch Battle Royale Tournament", "https://osu.ppy.sh/community/forums/topics/1319593", [new Date(2021, 6, 10), new Date(2021, 7, 1)], // Will end before I could ref anything
 		[]],
 
 		["Koro's Back 2 Skool Tournament", "https://osu.ppy.sh/community/forums/topics/1337953", [new Date(2021, 6, 17), new Date(2021, 7, 28)],
-		[87612933, 87641253]],
+		[87612933, 87641253, 88036252, 88036259, 88084230]],
 
 		["osu! Romania Summer Tournament 2021", "https://osu.ppy.sh/community/forums/topics/1300582", [new Date(2021, 6, 20), new Date(2021, 8, 7)],
 		[87735546, 87750966, 87812622]],
