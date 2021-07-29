@@ -59,6 +59,7 @@ img {
 	margin-left: 0.1vmax;
 	margin-top: 1.2vmax;
 	margin-right: 0.2vmax;
+	vertical-align: sub; /* flag update */
 }
 
 #statistics_wrapper {
@@ -155,7 +156,9 @@ img {
 }
 
 .player {
-	display: inline-block;
+	/* flag update */
+	/* display: inline-block; */
+	display: inline;
 }
 
 .match_time {

@@ -28,12 +28,26 @@ class Match {
 }
 
 class Player {
-	constructor(id, name, flag, rank) {
+	constructor(id, name, flag_id, rank) {
 		this.id = id
 		this.name = name
-		this.flag = `https://osu.ppy.sh/images/flags/${flag}.png`
+		//this.flag = `https://osu.ppy.sh/images/flags/${flag}.png`
+		this.flag = newFlagUrlSucks(flag_id)
 		this.rank = rank
 	}
+}
+
+function newFlagUrlSucks(flag_id) {
+	let beauty = "https://osu.ppy.sh/assets/images/flags/"
+	for (let i = 0; i < flag_id.length; i++) {
+		beauty += (flag_id.charCodeAt(i) + 127397).toString(16)
+		if (i != flag_id.length - 1) {
+			beauty += "-"
+		} else {
+			beauty += ".svg"
+		}
+	}
+	return beauty
 }
 
 async function buildWebpage() {
@@ -94,7 +108,7 @@ async function buildWebpage() {
 		["WhiteCat Official Osu! Tournament Mid Tier", "https://osu.ppy.sh/community/forums/topics/1298947", [new Date(2021, 4, 29), new Date(2021, 6, 18)],
 		[84567139, 84906677, 84907634, 85041110]],
 
-		["finnish duo cup", "https://osu.ppy.sh/community/forums/topics/1313956", [new Date(2021, 4, 28), new Date(2021, 7, 1)], // ???????
+		["finnish duo cup", "https://osu.ppy.sh/community/forums/topics/1313956", [new Date(2021, 4, 28), new Date(2021, 6, 31)],
 		[84562646, 84565561, 84569390]],
 
 		["SEA Summer Suiji Showdown", "https://osu.ppy.sh/community/forums/topics/1306172", [new Date(2021, 4, 29), new Date(2021, 6, 11)],
