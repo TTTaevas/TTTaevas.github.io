@@ -49,10 +49,22 @@ class Player {
 }
 
 class Flag {
-	constructor(name, appearances) {
-		this.name = name
+	constructor(flag_url, appearances) {
+		this.id = flag_url.substring(flag_url.indexOf("images/flags/") + "images/flags/".length, flag_url.lastIndexOf("."))
+		this.name = FlagIdDesucker(this.id)
+		this.url = flag_url
 		this.appearances = 1
 	}
+}
+
+function FlagIdDesucker(bad_flag_id) {
+	let good_flag_id = ""
+	let parts = bad_flag_id.split("-")
+	for (let i = 0; i < parts.length; i++) {
+		good_flag_id += String.fromCharCode(parseInt(parts[i], 16) - 127397)
+	}
+	console.log(bad_flag_id, good_flag_id)
+	return good_flag_id
 }
 
 function resetStats(matches, max_players, max_flags, sort_method) {
@@ -151,7 +163,7 @@ function resetStats(matches, max_players, max_flags, sort_method) {
 	for (let i = 0; i < players.length; i++) {
 		let to_add = true
 		for (let e = 0; e < flags.length; e++) {
-			if (players[i].flag == flags[e].name) {
+			if (players[i].flag == flags[e].url) {
 				to_add = false
 				flags[e].appearances++
 			}
@@ -166,7 +178,7 @@ function resetStats(matches, max_players, max_flags, sort_method) {
 	for (let i = 0; i < limit; i++) {
 		let row = document.createElement("div")
 		row.className = "row"
-		row.innerHTML = `${i+1}: <img src=${flags[i].name}>${flags[i].name.substring(32, 34)} | ${flags[i].appearances} player${flags[i].appearances > 1 ? "s" : ""}`
+		row.innerHTML = `${i+1}: <img src=${flags[i].url}>${flags[i].name} | ${flags[i].appearances} player${flags[i].appearances > 1 ? "s" : ""}`
 		flag_appearances.appendChild(row)
 	}
 
