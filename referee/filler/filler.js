@@ -137,7 +137,7 @@ async function buildWebpage() {
 		[]],
 
 		["Koro's Back 2 Skool Tournament", "https://osu.ppy.sh/community/forums/topics/1337953", [new Date(2021, 6, 17), new Date(2021, 7, 28)],
-		[87612933, 87641253, 88036252, 88036259, 88084230, 88396306, 88396317, 88396339, 88414457, 88417129]],
+		[87612933, 87641253, 88036252, 88036259, 88084230, 88396306, 88396317, 88396339, 88414457, 88417129, 88451881]],
 
 		["osu! Romania Summer Tournament 2021", "https://osu.ppy.sh/community/forums/topics/1300582", [new Date(2021, 6, 20), new Date(2021, 8, 7)],
 		[87735546, 87750966, 87812622]],
