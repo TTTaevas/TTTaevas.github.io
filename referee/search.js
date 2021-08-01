@@ -63,7 +63,6 @@ function FlagIdDesucker(bad_flag_id) {
 	for (let i = 0; i < parts.length; i++) {
 		good_flag_id += String.fromCharCode(parseInt(parts[i], 16) - 127397)
 	}
-	console.log(bad_flag_id, good_flag_id)
 	return good_flag_id
 }
 

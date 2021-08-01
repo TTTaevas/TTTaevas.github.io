@@ -4,6 +4,10 @@
 require('dotenv').config()
 const fs = require('fs')
 counter = 0
+fast_mode = false
+
+// If `fast_mode` is set on false, the script will make 2 or 3 requests per second
+// If `fast_mode` is set on true, the script will make **a whole lot more**
 
 class Tournament {
 	constructor(name, forum, schedule, matches) {
@@ -133,7 +137,7 @@ async function buildWebpage() {
 		[]],
 
 		["Koro's Back 2 Skool Tournament", "https://osu.ppy.sh/community/forums/topics/1337953", [new Date(2021, 6, 17), new Date(2021, 7, 28)],
-		[87612933, 87641253, 88036252, 88036259, 88084230]],
+		[87612933, 87641253, 88036252, 88036259, 88084230, 88396306, 88396317, 88396339, 88414457, 88417129]],
 
 		["osu! Romania Summer Tournament 2021", "https://osu.ppy.sh/community/forums/topics/1300582", [new Date(2021, 6, 20), new Date(2021, 8, 7)],
 		[87735546, 87750966, 87812622]],
@@ -180,7 +184,14 @@ async function buildWebpage() {
 
 async function addTournament(name, forum, schedule, mp_ids) {
 	console.log(`\n${name}: GETTING MATCHES`)
-	const matches = await Promise.all(await mp_ids.map(async mp_id => await addMatch(name, mp_id)))
+	let matches = []
+	if (fast_mode) {
+		matches = await Promise.all(await mp_ids.map(async mp_id => await addMatch(name, mp_id)))
+	} else {
+		for (let i = 0; i < mp_ids.length; i++) {
+			matches.push(await addMatch(name, mp_ids[i]))
+		}
+	}
 	console.log(`${name}: FINISHED\n`)
 	return new Tournament(name, forum, schedule, matches)
 }
@@ -199,12 +210,33 @@ async function addMatch(name, mp_id) {
 			if (!already_in) {players_ids.push(match.games[i].scores[e].user_id)}
 		}
 	}
+
 	console.log(`(${counter}) ${name}: GETTING PLAYERS FOR MATCH ${mp_id}`)
-	const players = await Promise.all(await players_ids.map(async player_id => await addPlayer(player_id).catch((e) => console.log("An error happened: ", e))))
+	let players = []
+	if (fast_mode) {
+		players = await Promise.all(await players_ids.map(async player_id => await addPlayer(player_id).catch((e) => {
+			console.log("An error happened: ", e)
+			if (e.response && e.response.status == 429) {
+				console.log("ENDING THE SCRIPT: TOO MANY REQUESTS")
+				process.exit(1)
+			}
+		})))
+	} else {
+		for (let i = 0; i < players_ids.length; i++) {
+			players.push(await addPlayer(players_ids[i]).catch((e) => {
+				console.log("An error happened: ", e)
+				if (e.response && e.response.status == 429) {
+					console.log("ENDING THE SCRIPT: TOO MANY REQUESTS")
+					process.exit(1)
+				}
+			}))
+		}
+	}
 	return new Match(match.match.name, match.match.match_id, players, start)
 }
 
 async function addPlayer(player_id) {
+	if (!fast_mode) {console.log(`(${counter}) GETTING PLAYER ${player_id}`)}
 	let player = await get("get_user", `u=${player_id}`)
 	player = player[0]
 	return player != undefined ? new Player(player.user_id, player.username, player.country, player.pp_rank) : new Player(player_id, "BANNED_USER", "CX", Number.MAX_VALUE)
