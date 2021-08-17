@@ -156,9 +156,8 @@ img {
 }
 
 .player {
-	/* flag update */
-	/* display: inline-block; */
-	display: inline;
+	display: inline-block; /* if png */
+	/* display: inline; */ /* if svg */
 }
 
 .match_time {

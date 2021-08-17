@@ -50,8 +50,9 @@ class Player {
 
 class Flag {
 	constructor(flag_url, appearances) {
-		this.id = flag_url.substring(flag_url.indexOf("images/flags/") + "images/flags/".length, flag_url.lastIndexOf("."))
-		this.name = FlagIdDesucker(this.id)
+		//this.id = flag_url.substring(flag_url.indexOf("images/flags/") + "images/flags/".length, flag_url.lastIndexOf("."))
+		this.id = flag_url.substring(flag_url.indexOf("omkserver.nl/") + "omkserver.nl/".length, flag_url.lastIndexOf("."))
+		this.name = this.id //FlagIdDesucker(this.id)
 		this.url = flag_url
 		this.appearances = 1
 	}
