@@ -16,6 +16,7 @@ function effect(button) {
 
 		switch(button.id) {
 			case "btn_qualifs_1":
+				link_to_sheet.href = "https://docs.google.com/spreadsheets/d/1PzYa94TuyWP812z11BRSFSdHHWn6o9GEBeBYx8ZbfOE/edit?usp=sharing"
 				stuff_to_add.push(createText("p",
 					"This template allows you to easily and quickly setup a referee sheet for your 1v1 tournament's qualifiers!"))
 				stuff_to_add.push(createImage("./images/qualifs_1/settings.jpg"))
@@ -24,7 +25,26 @@ function effect(button) {
 				stuff_to_add.push(createImage("./images/qualifs_1/lobbies.jpg"))
 				stuff_to_add.push(createText("p",
 					"Give your lobbies IDs, then copy them and paste them into the script in order to create tabs automatically!"))
-				link_to_sheet.href = "https://docs.google.com/spreadsheets/d/1PzYa94TuyWP812z11BRSFSdHHWn6o9GEBeBYx8ZbfOE/edit?usp=sharing"
+				break
+			case "btn_calculations_1":
+				link_to_sheet.href = "https://docs.google.com/spreadsheets/d/1AV8IM6LdCBlKCUjTKcOJgd-MDvLt83isY_PlJHFs9M0/edit?usp=sharing"
+				stuff_to_add.push(createText("p",
+					"This is a modified version of IceDynamix's Qualifier Template, featuring an alternative way to get the players' user IDs, which are required for calculation"))
+				stuff_to_add.push(createText("p",
+					`That "alternative way" basically gets the user IDs from "rich text", the type of text that shows a link once hovered on, for example 
+					main sheets of tournaments usually feature a player list where player names can be found, and you can access their profile thanks to the rich text!`))
+				stuff_to_add.push(createText("p",
+					`However, player lists usually never feature user IDs, which are needed for calculating qualifiers results,
+					which is why I've created this!`))
+
+				let example = document.createElement("a")
+				example.href = "https://docs.google.com/spreadsheets/d/1m6X8In7nmnmvNdqRbHYs-1lSptj4yf607DhKtkxfP9Q/edit?usp=sharing"
+				example.appendChild(createText("p", "Example of how it would be used, here for Tomori Cup 2"))
+				stuff_to_add.push(example)
+
+				stuff_to_add.push(createText("p",
+					`Put shortly, it allows anyone to calculate the results of qualifiers at any time, so players don't have to wait for hosts/sheeters 
+					to release them!`))
 				break
 			default:
 				sheet_presentation.appendChild(createText("h2", "nExt"))
