@@ -1,0 +1,489 @@
+{
+    "tournaments": [
+        {
+            "name": "Orange's Mini Tournament February 2021",
+            "forum": "https://osu.ppy.sh/community/forums/topics/1235710",
+            "date": [
+                "2021-02-12T23:00:00.000Z",
+                "2021-03-20T23:00:00.000Z"
+            ],
+            "mp_ids": [
+                75671429,
+                75753901,
+                75793866,
+                76242916,
+                76814194,
+                76912215,
+                77366307,
+                78592434
+            ]
+        },
+        {
+            "name": "Pas de Nom 2v2 Tournament",
+            "forum": "https://osu.ppy.sh/community/forums/topics/1239289",
+            "date": [
+                "2021-02-26T23:00:00.000Z",
+                "2021-04-10T22:00:00.000Z"
+            ],
+            "mp_ids": [
+                76823379,
+                76861011,
+                76906277,
+                77409232,
+                77416464,
+                77454683,
+                77487179,
+                78067665,
+                78067630,
+                78479937,
+                78600780,
+                78657516,
+                78666437,
+                79936788
+            ]
+        },
+        {
+            "name": "Fooooooood's Hangry Tournament 2",
+            "forum": "https://osu.ppy.sh/community/forums/topics/1222132",
+            "date": [
+                "2021-02-19T23:00:00.000Z",
+                "2021-04-10T22:00:00.000Z"
+            ],
+            "mp_ids": [
+                77963157,
+                77978800,
+                77978733,
+                78055481,
+                78059530,
+                78072041,
+                78689305,
+                78735932,
+                79221048,
+                79308377,
+                79309171
+            ]
+        },
+        {
+            "name": "Osu! Tournament 1 (TIER 1)",
+            "forum": "https://osu.ppy.sh/community/forums/topics/1258192",
+            "date": [
+                "2021-03-19T23:00:00.000Z",
+                "2021-04-24T22:00:00.000Z"
+            ],
+            "mp_ids": [
+                78514204,
+                78768259,
+                79318056,
+                79339405,
+                79877379,
+                79937869,
+                79943073,
+                79955524,
+                80580537,
+                80608443,
+                81186276
+            ]
+        },
+        {
+            "name": "Osu! Tournament 1 (TIER 2)",
+            "forum": "https://osu.ppy.sh/community/forums/topics/1258192",
+            "date": [
+                "2021-03-19T23:00:00.000Z",
+                "2021-04-30T22:00:00.000Z"
+            ],
+            "mp_ids": [
+                78513180,
+                78615645,
+                78618985,
+                78692074,
+                79303835,
+                79317324,
+                79844339,
+                79849442,
+                79946482,
+                79962520,
+                79973768,
+                80467449,
+                80512103,
+                80512148,
+                81037578,
+                81186624,
+                81667185,
+                82273027
+            ]
+        },
+        {
+            "name": "Miyu's Flower Run 2021",
+            "forum": "https://osu.ppy.sh/community/forums/topics/1261786",
+            "date": [
+                "2021-04-09T22:00:00.000Z",
+                "2021-05-29T22:00:00.000Z"
+            ],
+            "mp_ids": [
+                80466676,
+                80561256,
+                80567323,
+                80575071,
+                81076238,
+                81087809,
+                81087857,
+                81098822,
+                81119664,
+                81171482,
+                81595155,
+                81595188,
+                81673733,
+                81680736,
+                81756133,
+                81758533,
+                82278694,
+                82318642,
+                82528114,
+                82760546,
+                82800070,
+                82867107,
+                82887600,
+                83323407,
+                83561974
+            ]
+        },
+        {
+            "name": "osu! Malaysia Amateur Tournament 2nd Edition",
+            "forum": "https://osu.ppy.sh/community/forums/topics/1247275",
+            "date": [
+                "2021-03-04T23:00:00.000Z",
+                "2021-04-24T22:00:00.000Z"
+            ],
+            "mp_ids": [
+                80465632,
+                80476682,
+                80563350,
+                81088133,
+                81181496,
+                81253559,
+                81679597
+            ]
+        },
+        {
+            "name": "Irish Circle Clicking Tournament 3",
+            "forum": "https://osu.ppy.sh/community/forums/topics/1266363",
+            "date": [
+                "2021-04-16T22:00:00.000Z",
+                "2021-04-23T22:00:00.000Z"
+            ],
+            "mp_ids": [
+                81026037
+            ]
+        },
+        {
+            "name": "ReadyUp, Game, Win! April Blitz",
+            "forum": "https://osu.ppy.sh/community/forums/topics/1267896",
+            "date": [
+                "2021-04-16T22:00:00.000Z",
+                "2021-04-17T22:00:00.000Z"
+            ],
+            "mp_ids": [
+                81096777
+            ]
+        },
+        {
+            "name": "Melody Tournament",
+            "forum": "https://osu.ppy.sh/community/forums/topics/1279911",
+            "date": [
+                "2021-04-17T22:00:00.000Z",
+                "2021-04-17T22:00:00.000Z"
+            ],
+            "mp_ids": [
+                81205136,
+                81210349,
+                81213299
+            ]
+        },
+        {
+            "name": "Triple Trouble II",
+            "forum": "https://osu.ppy.sh/community/forums/topics/1295530",
+            "date": [
+                "2021-04-29T22:00:00.000Z",
+                "2021-06-26T22:00:00.000Z"
+            ],
+            "mp_ids": [
+                82927626,
+                82936546,
+                82936584,
+                82961866,
+                83394573,
+                83483868,
+                83487536
+            ]
+        },
+        {
+            "name": "Catch French Dual Tournament",
+            "forum": "https://osu.ppy.sh/community/forums/topics/1295530",
+            "date": [
+                "2021-05-07T22:00:00.000Z",
+                "2021-06-04T22:00:00.000Z"
+            ],
+            "mp_ids": [
+                83401025,
+                83477551,
+                83480808,
+                83484015,
+                83956893,
+                84975189
+            ]
+        },
+        {
+            "name": "Epic Fumo Tournament 1",
+            "forum": "https://osu.ppy.sh/community/forums/topics/1303398",
+            "date": [
+                "2021-05-07T22:00:00.000Z",
+                "2021-07-05T22:00:00.000Z"
+            ],
+            "mp_ids": [
+                82836658,
+                82850037,
+                82887292,
+                82923218,
+                82927562,
+                82940037,
+                82965284,
+                83962031,
+                83963219,
+                84550232,
+                84615199,
+                85042304
+            ]
+        },
+        {
+            "name": "osu!mania Malaysia Tournament",
+            "forum": "https://osu.ppy.sh/community/forums/topics/1301065",
+            "date": [
+                "2021-05-13T22:00:00.000Z",
+                "2021-06-26T22:00:00.000Z"
+            ],
+            "mp_ids": [
+                84553995,
+                84556681
+            ]
+        },
+        {
+            "name": "Unicornlover's Scuffed Osu Tournament",
+            "forum": "https://osu.ppy.sh/community/forums/topics/1312008",
+            "date": [
+                "2021-05-27T22:00:00.000Z",
+                "2021-07-16T22:00:00.000Z"
+            ],
+            "mp_ids": [
+                85439410,
+                85878346,
+                86303510
+            ]
+        },
+        {
+            "name": "WhiteCat Official Osu! Tournament Low Tier",
+            "forum": "https://osu.ppy.sh/community/forums/topics/1298947",
+            "date": [
+                "2021-05-14T22:00:00.000Z",
+                "2021-07-10T22:00:00.000Z"
+            ],
+            "mp_ids": [
+                83477371,
+                83477438,
+                84518793,
+                84565637,
+                84569132,
+                85046268,
+                85048839,
+                85122411,
+                85877270
+            ]
+        },
+        {
+            "name": "WhiteCat Official Osu! Tournament Mid Tier",
+            "forum": "https://osu.ppy.sh/community/forums/topics/1298947",
+            "date": [
+                "2021-05-28T22:00:00.000Z",
+                "2021-07-17T22:00:00.000Z"
+            ],
+            "mp_ids": [
+                84567139,
+                84906677,
+                84907634,
+                85041110
+            ]
+        },
+        {
+            "name": "finnish duo cup",
+            "forum": "https://osu.ppy.sh/community/forums/topics/1313956",
+            "date": [
+                "2021-05-27T22:00:00.000Z",
+                "2021-07-30T22:00:00.000Z"
+            ],
+            "mp_ids": [
+                84562646,
+                84565561,
+                84569390
+            ]
+        },
+        {
+            "name": "SEA Summer Suiji Showdown",
+            "forum": "https://osu.ppy.sh/community/forums/topics/1306172",
+            "date": [
+                "2021-05-28T22:00:00.000Z",
+                "2021-07-10T22:00:00.000Z"
+            ],
+            "mp_ids": [
+                84968081,
+                85878215,
+                86303018,
+                86364088,
+                86369581,
+                86710511
+            ]
+        },
+        {
+            "name": "La provençale 2021",
+            "forum": "https://osu.ppy.sh/community/forums/topics/1313094",
+            "date": [
+                "2021-06-04T22:00:00.000Z",
+                "2021-07-10T22:00:00.000Z"
+            ],
+            "mp_ids": [
+                85940842,
+                86893128
+            ]
+        },
+        {
+            "name": "osu!Malaysia Tournament 2021",
+            "forum": "https://osu.ppy.sh/community/forums/topics/1311342",
+            "date": [
+                "2021-06-04T22:00:00.000Z",
+                "2021-07-24T22:00:00.000Z"
+            ],
+            "mp_ids": [
+                84975240,
+                84978259,
+                85046069,
+                85048991,
+                85367477,
+                85367550,
+                85373945,
+                85374022,
+                85436469
+            ]
+        },
+        {
+            "name": "South African osu! Tournament 3",
+            "forum": "https://osu.ppy.sh/community/forums/topics/1293423",
+            "date": [
+                "2021-06-10T22:00:00.000Z",
+                "2021-07-23T22:00:00.000Z"
+            ],
+            "mp_ids": [
+                85365151,
+                85403449,
+                85436437,
+                85439172,
+                85529600,
+                85532044,
+                86654625,
+                86713598,
+                86713608
+            ]
+        },
+        {
+            "name": "5 Digit Joker Cup",
+            "forum": "https://osu.ppy.sh/community/forums/topics/1309821",
+            "date": [
+                "2021-06-10T22:00:00.000Z",
+                "2021-08-17T22:00:00.000Z"
+            ],
+            "mp_ids": [
+                85501268,
+                85512213,
+                85512301,
+                86006107,
+                86006124,
+                86655106,
+                86721037,
+                86721039,
+                86721452
+            ]
+        },
+        {
+            "name": "Nightmare's Basic Tourney",
+            "forum": "https://osu.ppy.sh/community/forums/topics/1328880",
+            "date": [
+                "2021-07-08T22:00:00.000Z",
+                "2021-08-21T22:00:00.000Z"
+            ],
+            "mp_ids": [
+                87989572,
+                88037613
+            ]
+        },
+        {
+            "name": "Koro's Back 2 Skool Tournament",
+            "forum": "https://osu.ppy.sh/community/forums/topics/1337953",
+            "date": [
+                "2021-07-16T22:00:00.000Z",
+                "2021-08-27T22:00:00.000Z"
+            ],
+            "mp_ids": [
+                87612933,
+                87641253,
+                88036252,
+                88036259,
+                88084230,
+                88396306,
+                88396317,
+                88396339,
+                88414457,
+                88417129,
+                88451881,
+                89357151,
+                89561902
+            ]
+        },
+        {
+            "name": "osu! Romania Summer Tournament 2021",
+            "forum": "https://osu.ppy.sh/community/forums/topics/1300582",
+            "date": [
+                "2021-07-19T22:00:00.000Z",
+                "2021-09-06T22:00:00.000Z"
+            ],
+            "mp_ids": [
+                87735546,
+                87750966,
+                87812622
+            ]
+        },
+        {
+            "name": "Dials Scuffed Summer Cup",
+            "forum": "https://osu.ppy.sh/community/forums/topics/1364452",
+            "date": [
+                "2021-08-12T22:00:00.000Z",
+                "2021-10-02T22:00:00.000Z"
+            ],
+            "mp_ids": [
+                89248805,
+                89252658,
+                89277944,
+                89302528,
+                89307789,
+                89561191,
+                89610540,
+                89614270,
+                89614560,
+                89635598,
+                89671299,
+                89671303,
+                89694267,
+                89694271,
+                89954228,
+                89969024,
+                90076245
+            ]
+        }
+    ]
+}
