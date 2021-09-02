@@ -48,14 +48,14 @@ function effect(button) {
 				break
 			default:
 				sheet_presentation.appendChild(createText("h2", "nExt"))
-				document.body.appendChild(sheet_presentation)
+				document.getElementById("sheet_selector").insertAdjacentElement("afterend", sheet_presentation)
 				return
 		}
 		
 		link_to_sheet.appendChild(createText("p", "Link to the template"))
 		stuff_to_add.push(link_to_sheet)
 		stuff_to_add.forEach(function(element) {sheet_presentation.appendChild(element)})
-		document.body.appendChild(sheet_presentation)
+		document.getElementById("sheet_selector").insertAdjacentElement("afterend", sheet_presentation)
 	}
 }
 

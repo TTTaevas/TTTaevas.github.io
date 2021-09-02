@@ -95,6 +95,7 @@ async function buildWebpage() {
 		html = html + "</div></div>"
 	}
 
+	html = html + `<footer id="return"><a href="../"><p>Return to main page</p></a></footer>`
 	html = html + "</body></html>"
 	fs.writeFile("../index.html", html, function(err) {
 		if (err) {throw err}
