@@ -1,0 +1,182 @@
+{	
+	"player": 7276846,
+	"tournaments": [
+		{
+			"name": "Kawaii Cup",
+			"forum": "https://osu.ppy.sh/community/forums/topics/1228893",
+			"gamemode": 0,
+			"team": false,
+			"seed": 15,
+			"placing": 16,
+			"matches": [
+				{
+					"id": 74611125,
+					"results": false
+				},
+				{
+					"id": 75149489,
+					"results": {
+						"wins": 4,
+						"losses": 0
+					}
+				},
+				{
+					"id": 75706987,
+					"results": {
+						"wins": 5,
+						"losses": 1
+					}
+				},
+				{
+					"id": 76343713,
+					"results": {
+						"wins": 2,
+						"losses": 4
+					}
+				}
+			],
+			"comment": ""
+		},
+		{
+			"name": "Catch French Tournament 2021",
+			"forum": "https://osu.ppy.sh/community/forums/topics/1254726",
+			"gamemode": 2,
+			"team": false,
+			"seed": 27,
+			"placing": 28,
+			"matches": [
+				{
+					"id": 78561077,
+					"results": false
+				},
+				{
+					"id": 79215693,
+					"results": {
+						"wins": 0,
+						"losses": 4
+					}
+				},
+				{
+					"id": 79226997,
+					"results": {
+						"wins": 2,
+						"losses": 4
+					}
+				}
+			],
+			"comment": ""
+		},
+		{
+			"name": "Non-Professional Cup 4",
+			"forum": "https://osu.ppy.sh/community/forums/topics/1254726",
+			"gamemode": 0,
+			"team": {
+				"name": "FrenchCoupleAndTheirSon",
+				"members": [
+					11409334,
+					13347736
+				]
+			},
+			"seed": 5,
+			"placing": 8,
+			"matches": [
+				{
+					"id": 82359782,
+					"results": false
+				},
+				{
+					"id": 82876727,
+					"results": false
+				},
+				{
+					"id": 83409488,
+					"results": false
+				},
+				{
+					"id": 84033024,
+					"results": false
+				},
+				{
+					"id": 84036067,
+					"results": false
+				},
+				{
+					"id": 84491059,
+					"results": false
+				},
+				{
+					"id": 84494008,
+					"results": false
+				},
+				{
+					"id": 84985136,
+					"results": false
+				},
+				{
+					"id": 84989554,
+					"results": false
+				}
+			],
+			"comment": ""
+		},
+		{
+			"name": "Catch Suiji Tournament 2",
+			"forum": "https://osu.ppy.sh/community/forums/topics/1271420",
+			"gamemode": 2,
+			"team": {
+				"name": "pain-peko",
+				"members": [
+					10043310,
+					8417087,
+					5124924,
+					10278243,
+					6642597
+				]
+			},
+			"seed": 3,
+			"placing": 4,
+			"matches": [
+				{
+					"id": 84581623,
+					"results": false
+				},
+				{
+					"id": 84982102,
+					"results": {
+						"wins": 5,
+						"losses": 2
+					}
+				},
+				{
+					"id": 85445690,
+					"results": {
+						"wins": 5,
+						"losses": 1
+					}
+				},
+				{
+					"id": 85883837,
+					"results": {
+						"wins": 1,
+						"losses": 6
+					}
+				},
+				{
+					"id": 86307641,
+					"results": {
+						"wins": 6,
+						"losses": 4
+					}
+				},
+				{
+					"id": 86374453,
+					"results": {
+						"wins": 5,
+						"losses": 6
+					}
+				}
+			],
+			"comment": ""
+		}
+	]
+}

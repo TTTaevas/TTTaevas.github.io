@@ -1,0 +1,265 @@
+html {
+	background-color: #242031;
+	color: #568FCC;
+	font-family: Arial;
+	text-align: center;
+}
+
+body {
+	margin: 0px;
+}
+
+header {
+	position: relative;
+	background-color: #242031;
+	color: #568FCC;
+	width: 90%;
+	padding: 10px;
+	margin: auto auto 2vmax auto;
+}
+
+h1 {
+	font-size: 4vmax;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.search {
+	border: solid 1px black;
+	font-size: 17px;
+	padding: 5px;
+	text-align: center;
+}
+
+button {
+	background-color: #C154A3;
+	color: black; 
+	border: 2px solid black;
+	padding: 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 17px;
+	cursor: pointer;
+}
+
+h3 {
+	font-size: 7vmax;
+	margin: 1vmax auto auto auto;
+}
+
+a {
+	color: #568FCC;
+}
+
+img {
+	max-width: 30px;
+	margin-left: 0.1vmax;
+	margin-top: 0.2vmax;
+	margin-right: 0.2vmax;
+	vertical-align: sub; /* flag update */
+}
+
+#statistics_wrapper {
+	display: none;
+}
+
+#max_results * {
+	margin: 6px;
+}
+
+#max_results_field {
+	border: solid 1px black;
+	width: 60px;
+	text-align: center;
+}
+
+#sort_by {
+	margin-bottom: 30px;
+}
+
+#statistics {
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+	justify-content: center;
+}
+
+#number_results {
+	margin: 16px 8px;
+}
+
+#hide_stats {
+	display: none;
+}
+
+@media screen and (max-width: 500px) {
+	button {
+		display: none;
+	}
+}
+
+#player_appearances, #flag_appearances {
+	top: 1vmax;
+	width: 20vmax;
+	min-width: 200px;
+	border: 3px white solid;
+	font-weight: bold;
+	margin: 0px 1vmax 2vmax 1vmax;
+}
+
+.row {
+	padding: 6px;
+}
+
+.row img {
+	margin-top: 0px;
+}
+
+.tournament {
+	position: relative;
+	background-color: #1d1b2682;
+	border: 1px solid white;
+	border-radius: 10px;
+	margin: 1vmax auto auto auto;
+	padding: 1vmax 0px 1vmax 0px;
+	/* padding: 1vmax 0px 0px 0px; maybe */
+	width: 85%;
+}
+
+.details {
+	border-bottom: 1px white solid;
+	padding-bottom: 1vmax;
+}
+
+.tourney_name {
+	font-size: calc(12px + 1.5vw);
+	font-weight: bold;
+	margin: 0px 10px;
+}
+
+.info {
+	display: inline-flex;
+	border: 1px solid;
+	border-radius: 10px;
+	margin: 10px;
+}
+
+.info * {
+	padding: 0.2vmax 10px;
+	margin: auto;
+}
+
+.team {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.team_name_div * {
+	margin: 5px 0 2px 0;
+	display: inline-flex;
+}
+
+.team_name {
+	font-style: italic;
+	font-weight: bold;
+}
+
+.match .players {
+	margin-top: 5px;
+}
+
+.player {
+	display: inline-block;
+}
+
+.schedule {
+	padding-bottom: 0px;
+}
+
+.number_matches {
+	padding-top: 0px;
+}
+
+.match {
+	margin: 10px 2vmax;
+	padding-bottom: 10px;
+}
+
+.match:not(.qualifier) {
+	border-bottom: 1px dashed;
+}
+
+.qualifier {
+	background-color: #568FCC;
+	border: 1px solid #242031;
+	border-radius: 50px;
+	padding: 10px;
+}
+
+.qualifier * {
+	color: seashell;
+}
+
+.results * {
+	border: 1px solid;
+	margin: 10px auto 0 auto;
+	padding: 5px;
+	width: max-content;
+}
+
+.win {
+	color: green;
+}
+
+.loss {
+	color: red;
+}
+
+.match_content {
+	position: relative;
+	border-bottom: 1px solid;
+	padding: 1vmax 0.5vmax 0.7vmax 0.5vmax;
+}
+
+.player {
+	display: inline-block; /* if png */
+	/* display: inline; */ /* if svg */
+	margin: 0px 5px;
+}
+
+.match_time {
+	position: absolute;
+	padding: 5px;
+}
+
+.number_players {
+	position: absolute;
+	right: 0;
+	padding: 5px;
+}
+
+.match_name {
+	font-size: calc(12px + 1.1vw);
+	font-weight: bold;
+	margin: 0px 8px;
+}
+
+@media screen and (max-width: 340px) {
+	.info {
+		display: inline-block;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.info {
+		position: absolute;
+		right: 0;
+	}
+}
+
+@media screen and (max-width: 1400px) {
+	.number_players, .match_time {
+		display: none;
+	}
+}

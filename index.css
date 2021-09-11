@@ -9,6 +9,7 @@ html {
 	background-color: #130904;
 	background-image: linear-gradient(180deg, black 60%, #0B47AE);
 	color: blue;
+	overflow: hidden;
 }
 
 body {
@@ -24,15 +25,17 @@ body {
 }
 
 #buttons {
-	position: absolute;
-	top: 30%;
-	left: 10%;
-	right: 10%;
-	transform: translateY(-50%);
-	margin: 0px;
+	position: relative;
+	margin: 0px 10%;
 	padding: 40px 0px;
 	list-style-type: none;
 	border: 1px solid #0B47AE;
+}
+
+@media screen and (min-height: 600px) {
+	#buttons {
+		transform: translateY(30%);
+	}
 }
 
 li {
@@ -70,3 +73,7 @@ button:hover {
 	border-color: green;
 }
 
+#player:hover {
+	color: #568FCC;
+	border-color: #568FCC;
+}

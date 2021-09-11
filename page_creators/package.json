@@ -1,10 +1,10 @@
 {
-  "name": "filler",
+  "name": "page_creators",
   "version": "1.0.0",
-  "description": "Creates index.html in the parent folder",
-  "main": "filler.js",
+  "description": "Creates index.html in other folders",
+  "main": "referee.js",
   "dependencies": {
-    "axios": "^0.21.1",
+    "axios": "^0.21.2",
     "dotenv": "^8.2.0"
   },
   "devDependencies": {},
