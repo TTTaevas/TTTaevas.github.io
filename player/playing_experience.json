@@ -177,6 +177,153 @@
 				}
 			],
 			"comment": ""
+		},
+		{
+			"name": "Orange's Mini Tournament June 2021",
+			"forum": "https://osu.ppy.sh/community/forums/topics/1325451",
+			"gamemode": 0,
+			"team": false,
+			"seed": 14,
+			"placing": 64,
+			"matches": [
+				{
+					"id": 84896611,
+					"results": {
+						"wins": 2,
+						"losses": 4
+					}
+				}
+			],
+			"comment": ""
+		},
+		{
+			"name": "4 Digit Player Tournament Season 4",
+			"forum": "https://osu.ppy.sh/community/forums/topics/1325451",
+			"gamemode": 2,
+			"team": false,
+			"seed": 62,
+			"placing": 16,
+			"matches": [
+				{
+					"id": 85470514,
+					"results": false
+				},
+				{
+					"id": 85824025,
+					"results": {
+						"wins": 4,
+						"losses": 3
+					}
+				},
+				{
+					"id": 86254527,
+					"results": {
+						"wins": 4,
+						"losses": 1
+					}
+				},
+				{
+					"id": 86778285,
+					"results": {
+						"wins": 5,
+						"losses": 3
+					}
+				}
+			],
+			"comment": ""
+		},
+		{
+			"name": "BQT3",
+			"forum": "https://osu.ppy.sh/community/forums/topics/1311662",
+			"gamemode": 0,
+			"team": {
+				"name": "fuckshortteamnames!!",
+				"members": [
+					11409334,
+					15671175,
+					8484023,
+					16836380
+				]
+			},
+			"seed": 9,
+			"placing": 24,
+			"matches": [
+				{
+					"id": 85442691,
+					"results": false
+				},
+				{
+					"id": 85949221,
+					"results": {
+						"wins": 4,
+						"losses": 0
+					}
+				},
+				{
+					"id": 86313385,
+					"results": {
+						"wins": 4,
+						"losses": 1
+					}
+				},
+				{
+					"id": 86772817,
+					"results": {
+						"wins": 4,
+						"losses": 5
+					}
+				},
+				{
+					"id": 87116633,
+					"results": {
+						"wins": 1,
+						"losses": 5
+					}
+				}
+			],
+			"comment": ""
+		},
+		{
+			"name": "Paradoxal's Summer Challenge",
+			"forum": "https://osu.ppy.sh/community/forums/topics/1311662",
+			"gamemode": 0,
+			"team": {
+				"name": "jmt",
+				"members": [
+					15315086,
+					17241883
+				]
+			},
+			"seed": 9,
+			"placing": 12,
+			"matches": [
+				{
+					"id": 85905090,
+					"results": false
+				},
+				{
+					"id": 86383188,
+					"results": {
+						"wins": 5,
+						"losses": 1
+					}
+				},
+				{
+					"id": 86717013,
+					"results": {
+						"wins": 5,
+						"losses": 4
+					}
+				},
+				{
+					"id": 87560581,
+					"results": {
+						"wins": 1,
+						"losses": 6
+					}
+				}
+			],
+			"comment": ""
 		}
 	]
 }
