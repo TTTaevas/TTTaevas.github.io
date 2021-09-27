@@ -324,6 +324,174 @@
 				}
 			],
 			"comment": ""
+		},
+		{
+			"name": "Tomori Cup 2",
+			"forum": "https://osu.ppy.sh/community/forums/topics/1340754",
+			"gamemode": 0,
+			"team": {
+				"name": "tyler1",
+				"members": [
+					13347736,
+					10763246,
+					12754827
+				]
+			},
+			"seed": 2,
+			"placing": 3,
+			"matches": [
+				{
+					"id": 87140831,
+					"results": false
+				},
+				{
+					"id": 88041511,
+					"results": {
+						"wins": 5,
+						"losses": 4
+					}
+				},
+				{
+					"id": 88462594,
+					"results": {
+						"wins": 4,
+						"losses": 6
+					}
+				},
+				{
+					"id": 88895142,
+					"results": {
+						"wins": 6,
+						"losses": 5
+					}
+				},
+				{
+					"id": 88905994,
+					"results": {
+						"wins": 6,
+						"losses": 1
+					}
+				},
+				{
+					"id": 89573712,
+					"results": {
+						"wins": 1,
+						"losses": 7
+					}
+				}
+			],
+			"comment": ""
+		},
+		{
+			"name": "Moop's Intermediate Tournament",
+			"forum": "https://osu.ppy.sh/community/forums/topics/1353676",
+			"gamemode": 0,
+			"team": {
+				"name": "chawles de gawlle uwu",
+				"members": [
+					10522620,
+					14567160,
+					17442279,
+					7150814,
+					13662743,
+					11486058,
+					10669137
+				]
+			},
+			"seed": 21,
+			"placing": 32,
+			"matches": [
+				{
+					"id": 87976792,
+					"results": false
+				},
+				{
+					"id": 88459531,
+					"results": {
+						"wins": 0,
+						"losses": 5
+					}
+				},
+				{
+					"id": 88902671,
+					"results": {
+						"wins": 3,
+						"losses": 5
+					}
+				}
+			],
+			"comment": ""
+		},
+		{
+			"name": "THE SUS TOURNAMENT",
+			"forum": "https://osu.ppy.sh/community/forums/topics/1376136",
+			"gamemode": 0,
+			"team": false,
+			"seed": 131,
+			"placing": 131,
+			"matches": [
+				{
+					"id": 88996132,
+					"results": false
+				}
+			],
+			"comment": ""
+		},
+		{
+			"name": "Catfe Cup",
+			"forum": "https://osu.ppy.sh/community/forums/topics/1374860",
+			"gamemode": 0,
+			"team": {
+				"name": ":3c:",
+				"members": [
+					11409334,
+					8484023
+				]
+			},
+			"seed": 10,
+			"placing": 24,
+			"matches": [
+				{
+					"id": 89679682,
+					"results": false
+				},
+				{
+					"id": 90058254,
+					"results": {
+						"wins": 4,
+						"losses": 0
+					}
+				},
+				{
+					"id": 90378938,
+					"results": {
+						"wins": 5,
+						"losses": 0
+					}
+				},
+				{
+					"id": 90818405,
+					"results": {
+						"wins": 2,
+						"losses": 5
+					}
+				},
+				{
+					"id": 91107384,
+					"results": {
+						"wins": 6,
+						"losses": 3
+					}
+				},
+				{
+					"id": 91170902,
+					"results": {
+						"wins": 4,
+						"losses": 6
+					}
+				}
+			],
+			"comment": ""
 		}
 	]
 }
