@@ -16,7 +16,8 @@
                 76912215,
                 77366307,
                 78592434
-            ]
+            ],
+            "banner_url": "https://i.imgur.com/rW9Pahy.png"
         },
         {
             "name": "Pas de Nom 2v2 Tournament",
@@ -40,7 +41,8 @@
                 78657516,
                 78666437,
                 79936788
-            ]
+            ],
+            "banner_url": "https://cdn.discordapp.com/attachments/826915082306715688/833059398376882226/PDN-Taevas.png"
         },
         {
             "name": "Fooooooood's Hangry Tournament 2",
@@ -82,7 +84,8 @@
                 80580537,
                 80608443,
                 81186276
-            ]
+            ],
+            "banner_url": "https://slippy.xyz/files/df85096d-e7c2-4a42-898f-a9a89b56c35a"
         },
         {
             "name": "Osu! Tournament 1 (TIER 2)",
@@ -110,7 +113,8 @@
                 81186624,
                 81667185,
                 82273027
-            ]
+            ],
+            "banner_url": "https://slippy.xyz/files/df85096d-e7c2-4a42-898f-a9a89b56c35a"
         },
         {
             "name": "Miyu's Flower Run 2021",
@@ -162,7 +166,8 @@
                 81181496,
                 81253559,
                 81679597
-            ]
+            ],
+            "banner_url": "https://cdn.discordapp.com/attachments/836507761005166602/836524643321118750/taevas.png"
         },
         {
             "name": "Irish Circle Clicking Tournament 3",
@@ -389,7 +394,8 @@
                 86654625,
                 86713598,
                 86713608
-            ]
+            ],
+            "banner_url": "https://cdn.discordapp.com/attachments/870665972086882304/870666019100827679/taevas.png"
         },
         {
             "name": "5 Digit Joker Cup",
@@ -443,7 +449,8 @@
                 88451881,
                 89357151,
                 89561902
-            ]
+            ],
+            "banner_url": "https://cdn.discordapp.com/attachments/822148049761337381/896530887368376380/sheeter_-_Taevas.png"
         },
         {
             "name": "osu! Romania Summer Tournament 2021",
@@ -489,7 +496,8 @@
                 90438643,
                 90440014,
                 90746374
-            ]
+            ],
+            "banner_url": "https://cdn.discordapp.com/attachments/859453845411332097/894342246726525008/Taevas.png"
         },
         {
             "name": "Catch French Intermediate Cup 3",
@@ -501,7 +509,9 @@
             "mp_ids": [
                 90799377,
                 90805228,
-                91159737
+                91159737,
+                91803843,
+                91806838
             ]
         }
     ]

@@ -194,7 +194,8 @@
 					}
 				}
 			],
-			"comment": ""
+			"comment": "",
+			"banner_url": "https://i.imgur.com/J4Ffays.png"
 		},
 		{
 			"name": "4 Digit Player Tournament Season 4",
@@ -380,7 +381,8 @@
 					}
 				}
 			],
-			"comment": ""
+			"comment": "",
+			"banner_url": "https://cdn.discordapp.com/attachments/881158290355154944/881163998425407518/bannertae.png"
 		},
 		{
 			"name": "Moop's Intermediate Tournament",
@@ -487,6 +489,56 @@
 					"id": 91170902,
 					"results": {
 						"wins": 4,
+						"losses": 6
+					}
+				}
+			],
+			"comment": ""
+		},
+		{
+			"name": "UTSCup",
+			"forum": "https://osu.ppy.sh/community/forums/topics/1383141",
+			"gamemode": 0,
+			"team": false,
+			"seed": 8,
+			"placing": 16,
+			"matches": [
+				{
+					"id": 90001558,
+					"results": false
+				},
+				{
+					"id": 90383007,
+					"results": {
+						"wins": 4,
+						"losses": 0
+					}
+				},
+				{
+					"id": 90796884,
+					"results": {
+						"wins": 4,
+						"losses": 1
+					}
+				},
+				{
+					"id": 91115016,
+					"results": {
+						"wins": 0,
+						"losses": 5
+					}
+				},
+				{
+					"id": 91454126,
+					"results": {
+						"wins": 6,
+						"losses": 3
+					}
+				},
+				{
+					"id": 91515422,
+					"results": {
+						"wins": 5,
 						"losses": 6
 					}
 				}
