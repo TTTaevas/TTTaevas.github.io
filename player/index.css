@@ -53,7 +53,7 @@ a {
 }
 
 img {
-	max-width: 30px;
+	width: 30px;
 	margin-left: 0.1vmax;
 	margin-top: 0.2vmax;
 	margin-right: 0.2vmax;
@@ -243,6 +243,11 @@ img {
 	font-size: calc(12px + 1.1vw);
 	font-weight: bold;
 	margin: 0px 8px;
+}
+
+.banner {
+	width: inherit;
+	max-width: max-content;
 }
 
 @media screen and (max-width: 340px) {

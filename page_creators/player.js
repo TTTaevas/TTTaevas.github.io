@@ -14,7 +14,7 @@ const new_flag_url_sucks = require("./functions/new_flag_url_sucks.js")
 fast_mode = false
 
 class Tournament {
-	constructor(name, forum, gamemode, team, seed, placing, matches) {
+	constructor(name, forum, gamemode, team, seed, placing, matches, banner) {
 		this.name = name
 		this.forum = forum
 		this.gamemode = gamemode === 0 ? "osu!" : gamemode === 1 ? "taiko" : gamemode === 2 ? "ctb" : "mania"
@@ -22,10 +22,11 @@ class Tournament {
 		this.seed = seed
 		this.placing = placing
 		this.matches = matches
+		this.banner = banner
 	}
 }
 
-async function addTournament(name, forum, gamemode, team, seed, placing, matches, main_player) {
+async function addTournament(name, forum, gamemode, team, seed, placing, matches, banner, main_player) {
 	console.log("\n")
 
 	let matches_arr = []
@@ -42,7 +43,7 @@ async function addTournament(name, forum, gamemode, team, seed, placing, matches
 		}
 	}
 
-	return new Tournament(name, forum, gamemode, team_object, seed, placing, matches_arr)
+	return new Tournament(name, forum, gamemode, team_object, seed, placing, matches_arr, banner)
 }
 
 class Match {
@@ -110,7 +111,7 @@ async function buildWebpage() {
 
 	for (let i = 0; i < json_tournaments.length; i++) {
 		let tournament = json_tournaments[i]
-		tournaments.push(await addTournament(tournament.name, tournament.forum, tournament.gamemode, tournament.team, tournament.seed, tournament.placing, tournament.matches, json_file.player))
+		tournaments.push(await addTournament(tournament.name, tournament.forum, tournament.gamemode, tournament.team, tournament.seed, tournament.placing, tournament.matches, tournament.banner_url, json_file.player))
 	}
 	
 	for (let i = 0; i < tournaments.length; i++) {
@@ -148,7 +149,9 @@ async function buildWebpage() {
 			}
 			html = html + "</div></div>"
 		}
-		html = html + "</div></div>"
+		html = html + "</div>"
+		if (tournaments[i].banner) {html = html + `<img class="banner" src="${tournaments[i].banner}">`}
+		html = html + "</div>"
 	}
 
 	html = html + `<footer id="return"><a href="../"><p>Return to main page</p></a></footer>`

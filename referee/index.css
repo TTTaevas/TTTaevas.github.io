@@ -177,6 +177,11 @@ img {
 	margin: 0px 8px;
 }
 
+.banner {
+	width: inherit;
+	max-width: max-content;
+}
+
 @media screen and (max-width: 1400px) {
 	.number_players, .match_time {
 		display: none;

@@ -14,7 +14,7 @@ const new_flag_url_sucks = require("./functions/new_flag_url_sucks.js")
 fast_mode = false
 
 class Tournament {
-	constructor(name, forum, schedule, matches) {
+	constructor(name, forum, schedule, matches, banner) {
 		this.name = name
 		this.forum = forum
 		this.schedule = schedule.map(date => {
@@ -23,10 +23,11 @@ class Tournament {
 			return `${a[0]}-${a[1]}-${a[2]}`
 		})
 		this.matches = matches
+		this.banner = banner
 	}
 }
 
-async function addTournament(name, forum, schedule, mp_ids) {
+async function addTournament(name, forum, schedule, mp_ids, banner) {
 	console.log("\n")
 
 	let matches = []
@@ -37,7 +38,7 @@ async function addTournament(name, forum, schedule, mp_ids) {
 			matches.push(await addMatch(name, mp_ids[i]))
 		}
 	}
-	return new Tournament(name, forum, schedule, matches)
+	return new Tournament(name, forum, schedule, matches, banner)
 }
 
 class Match {
@@ -105,7 +106,7 @@ async function buildWebpage() {
 
 	for (let i = 0; i < json_tournaments.length; i++) {
 		let tournament = json_tournaments[i]
-		tournaments.push(await addTournament(tournament.name, tournament.forum, tournament.date, tournament.mp_ids))
+		tournaments.push(await addTournament(tournament.name, tournament.forum, tournament.date, tournament.mp_ids, tournament.banner_url))
 	}
 	
 	for (let i = 0; i < tournaments.length; i++) {
@@ -127,7 +128,9 @@ async function buildWebpage() {
 			}
 			html = html + "</div></div></div>"
 		}
-		html = html + "</div></div>"
+		html = html + "</div>"
+		if (tournaments[i].banner) {html = html + `<img class="banner" src="${tournaments[i].banner}">`}
+		html = html + "</div>"
 	}
 
 	html = html + `<footer id="return"><a href="../"><p>Return to main page</p></a></footer>`
