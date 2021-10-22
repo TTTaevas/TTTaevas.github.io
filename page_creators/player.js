@@ -116,17 +116,12 @@ async function buildWebpage() {
 	for (let i = 0; i < tournaments.length; i++) {
 		// Tourney details
 		html = html + `<div class="tournament"><div class="details"><a class="tourney_name" href="${tournaments[i].forum}">${tournaments[i].name}</a>`
-		html = html + `<div class="info">
-			<p class="gamemode">Gamemode: ${tournaments[i].gamemode}</p>
-			<p class="seed">Seed: ${tournaments[i].seed}</p>
-			<p class="placing">Finished: ${tournaments[i].placing}</p>
-		</div>`
+		html = html + `<div class="info"><p class="gamemode">Gamemode: ${tournaments[i].gamemode}</p><p class="seed">Seed: ${tournaments[i].seed}</p><p class="placing">Finished: ${tournaments[i].placing}</p></div>`
 
 		if (tournaments[i].team) {
 			html = html + `<div class="team"><div class="team_name_div"><p>As</p><p class="team_name">${tournaments[i].team.name}</p><p>with:</p></div><div class="players">`
 			for (let o = 0; o < tournaments[i].team.members.length; o++) {
-				html = html + `<div class="player"><img src=${tournaments[i].team.members[o].flag}>
-				<a href="https://osu.ppy.sh/users/${tournaments[i].team.members[o].id}" title=${tournaments[i].team.members[o].rank}>${tournaments[i].team.members[o].name}</a></div>`
+				html = html + `<div class="player"><img src=${tournaments[i].team.members[o].flag}><a href="https://osu.ppy.sh/users/${tournaments[i].team.members[o].id}" title=${tournaments[i].team.members[o].rank}>${tournaments[i].team.members[o].name}</a></div>`
 			}
 			html = html + "</div></div>"
 		}
@@ -148,8 +143,7 @@ async function buildWebpage() {
 
 			html = html + `<div class="players">`
 			for (let o = 0; o < match.players.length; o++) {
-				html = html + `<div class="player"><img src=${match.players[o].flag}>
-				<a href="https://osu.ppy.sh/users/${match.players[o].id}" title=${match.players[o].rank}>${match.players[o].name}</a></div>`
+				html = html + `<div class="player"><img src=${match.players[o].flag}><a href="https://osu.ppy.sh/users/${match.players[o].id}" title=${match.players[o].rank}>${match.players[o].name}</a></div>`
 				if (o+1 != match.players.length) {html = html + " | "} /// ????
 			}
 			html = html + "</div></div>"
