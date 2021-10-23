@@ -129,7 +129,7 @@ async function buildWebpage() {
 			html = html + "</div></div></div>"
 		}
 		html = html + "</div>"
-		if (tournaments[i].banner) {html = html + `<img class="banner" src="${tournaments[i].banner}">`}
+		if (tournaments[i].banner) {html = html + `<img class="banner" src="images/${tournaments[i].banner}">`}
 		html = html + "</div>"
 	}
 
