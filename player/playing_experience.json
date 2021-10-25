@@ -544,6 +544,66 @@
 				}
 			],
 			"comment": ""
+		},
+		{
+			"name": "Kazuyii Cup",
+			"forum": "https://osu.ppy.sh/community/forums/topics/1424465",
+			"gamemode": 0,
+			"team": {
+				"name": "what team name",
+				"members": [
+					10989656,
+					12754827,
+					4284367,
+					15706348,
+					8077264
+				]
+			},
+			"seed": 1,
+			"placing": 0,
+			"matches": [
+				{
+					"id": 92145338,
+					"results": false
+				}
+			],
+			"comment": ""
+		},
+		{
+			"name": "Ix's Vocaloid Cup",
+			"forum": "https://osu.ppy.sh/community/forums/topics/1422880",
+			"gamemode": 0,
+			"team": {
+				"name": "i'm good with anything",
+				"members": [
+					18001045,
+					21180972,
+					18374145
+				]
+			},
+			"seed": 0,
+			"placing": 0,
+			"matches": [
+				
+			],
+			"comment": ""
+		},
+		{
+			"name": "Non-Professional Cup 5",
+			"forum": "https://osu.ppy.sh/community/forums/topics/1436323",
+			"gamemode": 0,
+			"team": {
+				"name": "lain mains on cocaine",
+				"members": [
+					11409334
+				]
+			},
+			"seed": 0,
+			"placing": 0,
+			"matches": [
+				
+			],
+			"comment": ""
 		}
 	]
 }
