@@ -21,7 +21,7 @@ html {
 	margin: 20px;
 }
 
-@media screen and (max-width: 1279px) {
+@media screen and (max-width: 1200px) {
 	.playlist {
 		margin-left: 10px;
 		margin-right: 10px;

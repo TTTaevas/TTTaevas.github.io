@@ -193,6 +193,12 @@ p_objects = [
 	}
 ]
 
+String.prototype.toMMSS = function() {
+	var minutes = ("00" + Math.floor((this % 3600) / 60)).slice(-2)
+	var seconds = ("00" + (this % 3600) % 60).slice(-2)
+	return minutes + ":" + seconds
+}
+
 async function main() {
 	var html = '<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">'
 	html += `<title>why does this even need to exist</title><link rel="stylesheet" type="text/css" href="./index.css"></head><body>`
@@ -210,6 +216,36 @@ async function main() {
 			html += `<a href="https://osu.ppy.sh/b/${map.map_id}" target="_blank" class="beatmap ${map.mod_id.substr(0, 2)}">`
 			html += `<img class="map_banner" src="https://assets.ppy.sh/beatmaps/${map_data.beatmapset_id}/covers/cover.jpg" alt="no banner available ><'">`
 			html += `<div class="map_mod_id">${map.mod_id}</div>`
+
+			html += `<div class="map_stats">`
+			var map_cs
+			var map_ar
+			var map_od
+			switch (map.mod_id.substr(0, 2)) {
+				case "NM":
+				case "HD":
+				case "TB":
+					html += `Length ${map_data.hit_length.toMMSS()} | CS ${map_data.diff_size} | AR ${map_data.diff_approach} | OD ${map_data.diff_overall}`
+					break
+				case "HR":
+					map_cs = map_data.diff_size * 1.3 > 10 ? 10 : (map_data.diff_size * 1.3).toFixed(1)
+					map_ar = map_data.diff_approach * 1.4 > 10 ? 10 : (map_data.diff_approach * 1.4).toFixed(1)
+					map_od = map_data.diff_overall * 1.4 > 10 ? 10 : (map_data.diff_overall * 1.4).toFixed(1)
+					html += `Length ${map_data.hit_length.toMMSS()} | CS ${map_cs} | AR ${map_ar} | OD ${map_od}`
+					break
+				case "DT":
+					map_ar = (map_data.diff_approach <= 5 ? (1800-((1800-map_data.diff_approach*120)*2/3))/120 : ((1200-((1200-(map_data.diff_approach-5)*150)*2/3))/150)+5).toFixed(1)
+					map_od = ((79.5-((79.5-6*map_data.diff_overall)*2/3))/6).toFixed(1)
+					//html += `Length ${String(map_data.hit_length / (3 / 2)).toMMSS()} | CS ${map_data.diff_size} | AR ${map_ar} | OD ${map_od}`
+					// I guess I'll need to figure out DT length soon
+					html += `Length ${map_data.hit_length.toMMSS()} without DT | CS ${map_data.diff_size} | AR ${map_ar} | OD ${map_od}`
+					break
+				case "EZ":
+					html += `Length ${map_data.hit_length.toMMSS()} | CS ${map_data.diff_size / 2} | AR ${map_data.diff_approach / 2} | OD ${map_data.diff_overall / 2}`
+					break
+			}
+			html += "</div>"
+
 			html += `<div class="map_name">${map_data.artist} - ${map_data.title} [${map_data.version}]</div>`
 			html += "</a>"
 		}
