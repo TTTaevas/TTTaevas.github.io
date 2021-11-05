@@ -565,6 +565,13 @@
 				{
 					"id": 92145338,
 					"results": false
+				},
+				{
+					"id": 93215099,
+					"results": {
+						"wins": 5,
+						"losses": 0
+					}
 				}
 			],
 			"comment": ""
@@ -581,10 +588,13 @@
 					18374145
 				]
 			},
-			"seed": 0,
+			"seed": 18,
 			"placing": 0,
 			"matches": [
-				
+				{
+					"id": 93200199,
+					"results": false
+				}
 			],
 			"comment": ""
 		},

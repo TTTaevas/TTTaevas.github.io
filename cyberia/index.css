@@ -49,6 +49,11 @@ html {
 	text-decoration: underline;
 }
 
+.map_stats {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
 .NM {
 	color: #cfe2f3;
 }

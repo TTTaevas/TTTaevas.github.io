@@ -217,6 +217,7 @@ async function main() {
 			html += `<img class="map_banner" src="https://assets.ppy.sh/beatmaps/${map_data.beatmapset_id}/covers/cover.jpg" alt="no banner available ><'">`
 			html += `<div class="map_mod_id">${map.mod_id}</div>`
 
+			html += `<div class="map_stats">BPM ${map.mod_id.substr(0, 2) == "DT" ? map_data.bpm * 1.5 : map_data.bpm}</div>`
 			html += `<div class="map_stats">`
 			var map_cs
 			var map_ar
