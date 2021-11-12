@@ -9,59 +9,6 @@ const error_handler = require("./functions/error_handler.js")
 
 p_objects = [
 	{
-		name: "C",
-		maps: [
-			{
-				mod_id: "NM1",
-				map_id: "420793"
-			},
-			{
-				mod_id: "NM2",
-				map_id: "2666657"
-			},
-			{
-				mod_id: "NM3",
-				map_id: "3078338"
-			},
-			{
-				mod_id: "NM4",
-				map_id: "3159459"
-			},
-			{
-				mod_id: "HD1",
-				map_id: "2937778"
-			},
-			{
-				mod_id: "HD2",
-				map_id: "106474"
-			},
-			{
-				mod_id: "HR1",
-				map_id: "303370"
-			},
-			{
-				mod_id: "HR2",
-				map_id: "3154824"
-			},
-			{
-				mod_id: "DT1",
-				map_id: "3158339"
-			},
-			{
-				mod_id: "DT2",
-				map_id: "2868550"
-			},
-			{
-				mod_id: "EZ1",
-				map_id: "122989"
-			},
-			{
-				mod_id: "TB1",
-				map_id: "1684705"
-			}
-		]
-	},
-	{
 		name: "D",
 		maps: [
 			{
@@ -188,6 +135,75 @@ p_objects = [
 			{
 				mod_id: "TB1",
 				map_id: "809513"
+			}
+		]
+	},
+	{
+		name: "F",
+		maps: [
+			{
+				mod_id: "NM1",
+				map_id: "2636342"
+			},
+			{
+				mod_id: "NM2",
+				map_id: "757386"
+			},
+			{
+				mod_id: "NM3",
+				map_id: "2395972"
+			},
+			{
+				mod_id: "NM4",
+				map_id: "2124036"
+			},
+			{
+				mod_id: "NM5",
+				map_id: "2538881"
+			},
+			{
+				mod_id: "HD1",
+				map_id: "2489781"
+			},
+			{
+				mod_id: "HD2",
+				map_id: "105978"
+			},
+			{
+				mod_id: "HD3",
+				map_id: "2906707"
+			},
+			{
+				mod_id: "HR1",
+				map_id: "87066"
+			},
+			{
+				mod_id: "HR2",
+				map_id: "3048988"
+			},
+			{
+				mod_id: "HR3",
+				map_id: "2018113"
+			},
+			{
+				mod_id: "DT1",
+				map_id: "3030309"
+			},
+			{
+				mod_id: "DT2",
+				map_id: "2581223"
+			},
+			{
+				mod_id: "DT3",
+				map_id: "773905"
+			},
+			{
+				mod_id: "EZ1",
+				map_id: "1863867"
+			},
+			{
+				mod_id: "TB1",
+				map_id: "883801"
 			}
 		]
 	}
