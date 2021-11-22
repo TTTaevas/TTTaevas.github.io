@@ -596,11 +596,32 @@
 				]
 			},
 			"seed": 18,
-			"placing": 0,
+			"placing": 24,
 			"matches": [
 				{
 					"id": 93200199,
 					"results": false
+				},
+				{
+					"id": 93878216,
+					"results": {
+						"wins": 3,
+						"losses": 5
+					}
+				},
+				{
+					"id": 94192859,
+					"results": {
+						"wins": 5,
+						"losses": 1
+					}
+				},
+				{
+					"id": 94249898,
+					"results": {
+						"wins": 3,
+						"losses": 5
+					}
 				}
 			],
 			"comment": ""
@@ -620,6 +641,41 @@
 			"matches": [
 				{
 					"id": 93624519,
+					"results": false
+				},
+				{
+					"id": 93887953,
+					"results": {
+						"wins": 5,
+						"losses": 4
+					}
+				},
+				{
+					"id": 94264534,
+					"results": {
+						"wins": 5,
+						"losses": 1
+					}
+				}
+			],
+			"comment": ""
+		},
+		{
+			"name": "WhiteOut Cup",
+			"forum": "https://osu.ppy.sh/community/forums/topics/1443184",
+			"gamemode": 0,
+			"team": {
+				"name": "Lolilovers",
+				"members": [
+					18123400,
+					14679069
+				]
+			},
+			"seed": 0,
+			"placing": 0,
+			"matches": [
+				{
+					"id": 94211774,
 					"results": false
 				}
 			],
