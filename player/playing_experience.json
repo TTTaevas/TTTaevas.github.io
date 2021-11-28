@@ -579,6 +579,13 @@
 						"wins": 6,
 						"losses": 3
 					}
+				},
+				{
+					"id": 94522335,
+					"results": {
+						"wins": 6,
+						"losses": 1
+					}
 				}
 			],
 			"comment": ""
@@ -656,6 +663,13 @@
 						"wins": 5,
 						"losses": 1
 					}
+				},
+				{
+					"id": 94505787,
+					"results": {
+						"wins": 2,
+						"losses": 6
+					}
 				}
 			],
 			"comment": ""
@@ -671,7 +685,7 @@
 					14679069
 				]
 			},
-			"seed": 0,
+			"seed": 8,
 			"placing": 0,
 			"matches": [
 				{
