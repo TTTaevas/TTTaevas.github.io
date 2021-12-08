@@ -586,6 +586,13 @@
 						"wins": 6,
 						"losses": 1
 					}
+				},
+				{
+					"id": 94809098,
+					"results": {
+						"wins": 7,
+						"losses": 4
+					}
 				}
 			],
 			"comment": ""
@@ -670,6 +677,20 @@
 						"wins": 2,
 						"losses": 6
 					}
+				},
+				{
+					"id": 94813130,
+					"results": {
+						"wins": 6,
+						"losses": 0
+					}
+				},
+				{
+					"id": 94858690,
+					"results": {
+						"wins": 6,
+						"losses": 5
+					}
 				}
 			],
 			"comment": ""
@@ -691,6 +712,13 @@
 				{
 					"id": 94211774,
 					"results": false
+				},
+				{
+					"id": 94865971,
+					"results": {
+						"wins": 4,
+						"losses": 0
+					}
 				}
 			],
 			"comment": ""
