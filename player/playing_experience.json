@@ -691,6 +691,13 @@
 						"wins": 6,
 						"losses": 5
 					}
+				},
+				{
+					"id": 95099050,
+					"results": {
+						"wins": 3,
+						"losses": 7
+					}
 				}
 			],
 			"comment": ""
@@ -707,7 +714,7 @@
 				]
 			},
 			"seed": 8,
-			"placing": 0,
+			"placing": 12,
 			"matches": [
 				{
 					"id": 94211774,
@@ -718,6 +725,27 @@
 					"results": {
 						"wins": 4,
 						"losses": 0
+					}
+				},
+				{
+					"id": 95091812,
+					"results": {
+						"wins": 3,
+						"losses": 5
+					}
+				},
+				{
+					"id": 95425338,
+					"results": {
+						"wins": 5,
+						"losses": 1
+					}
+				},
+				{
+					"id": 96256662,
+					"results": {
+						"wins": 0,
+						"losses": 6
 					}
 				}
 			],

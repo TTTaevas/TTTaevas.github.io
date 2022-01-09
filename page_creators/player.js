@@ -58,6 +58,10 @@ class Match {
 
 async function addMatch(name, mp_id, results, team) {
 	let match = await get("get_match", `mp=${mp_id}`, name)
+	if (!match.games.length) {
+		console.log(`COULD NOT get_match ${mp_id} (${name})`)
+		return mp_id
+	}
 	let start = match.games[0].start_time
 	
 	let players_ids = []
@@ -99,7 +103,7 @@ class Player {
 async function addPlayer(player_id, context) {
 	let player = await get("get_user", `u=${player_id}`, context)
 	player = player[0]
-	return player != undefined ? new Player(player.user_id, player.username, player.country, player.pp_rank) : new Player(player_id, "BANNED_USER", "CX", Number.MAX_VALUE)
+	return player != undefined ? new Player(player.user_id, player.username, player.country, player.pp_rank) : new Player(player_id, `RESTRICTED_${player_id}`, "CX", Number.MAX_VALUE)
 }
 
 async function buildWebpage() {
@@ -116,46 +120,48 @@ async function buildWebpage() {
 	
 	for (let i = 0; i < tournaments.length; i++) {
 		// Tourney details
-		html = html + `<div class="tournament"><div class="details"><a class="tourney_name" href="${tournaments[i].forum}">${tournaments[i].name}</a>`
-		html = html + `<div class="info"><p class="gamemode">Gamemode: ${tournaments[i].gamemode}</p><p class="seed">Seed: ${tournaments[i].seed}</p><p class="placing">Finished: ${tournaments[i].placing}</p></div>`
+		html += `<div class="tournament"><div class="details"><a class="tourney_name" href="${tournaments[i].forum}">${tournaments[i].name}</a>`
+		html += `<div class="info"><p class="gamemode">Gamemode: ${tournaments[i].gamemode}</p><p class="seed">Seed: ${tournaments[i].seed}</p><p class="placing">Finished: ${tournaments[i].placing}</p></div>`
 
 		if (tournaments[i].team) {
-			html = html + `<div class="team"><div class="team_name_div"><p>As</p><p class="team_name">${tournaments[i].team.name}</p><p>with:</p></div><div class="players">`
+			html += `<div class="team"><div class="team_name_div"><p>As</p><p class="team_name">${tournaments[i].team.name}</p><p>with:</p></div><div class="players">`
 			for (let o = 0; o < tournaments[i].team.members.length; o++) {
-				html = html + `<div class="player"><img src=${tournaments[i].team.members[o].flag}><a href="https://osu.ppy.sh/users/${tournaments[i].team.members[o].id}" title=${tournaments[i].team.members[o].rank}>${tournaments[i].team.members[o].name}</a></div>`
+				html += `<div class="player"><img src=${tournaments[i].team.members[o].flag}><a href="https://osu.ppy.sh/users/${tournaments[i].team.members[o].id}" title=${tournaments[i].team.members[o].rank}>${tournaments[i].team.members[o].name}</a></div>`
 			}
-			html = html + "</div></div>"
+			html += "</div></div>"
 		}
 
-		html = html + `</div><div class="matches">`
+		html += `</div><div class="matches">`
 
 		// Tourney matches
-		for (let e = 0; e < tournaments[i].matches.length; e++) {
+		for (let e = 0; e < tournaments[i].matches.length; e++) { // fuck off Gin for not bothering with ref clients, at least ig that's why your links expired
 			let match = tournaments[i].matches[e]
+			if (isNaN(match)) {
+				html += `<div class="match${!match.results ? " qualifier" : ""}">`
+				html += `<a class="match_name" href="${match.link}">${match.name}</a>`
 
-			html = html + `<div class="match${!tournaments[i].matches[e].results ? " qualifier" : ""}">`//<div class="match_time">${match.schedule}</div>` // ???
-			// html = html + `<div class="number_players">${match.players.length} player${match.players.length > 1 ? "s" : ""}</div>` // ???
-			html = html + `<a class="match_name" href="${match.link}">${match.name}</a>`
+				if (match.results) {
+					html += `<div class="info ${match.results.wins > match.results.losses ? "win" : "loss"}">`
+					html += `<p>${match.results.wins > match.results.losses ? "Won" : "Lost"} ${match.results.wins}-${match.results.losses}</p></div>`
+				}
 
-			if (match.results) {
-				html = html + `<div class="info ${match.results.wins > match.results.losses ? "win" : "loss"}">`
-				html = html + `<p>${match.results.wins > match.results.losses ? "Won" : "Lost"} ${match.results.wins}-${match.results.losses}</p></div>`
+				html += `<div class="players">`
+				for (let o = 0; o < match.players.length; o++) {
+					html += `<div class="player"><img src=${match.players[o].flag}><a href="https://osu.ppy.sh/users/${match.players[o].id}" title=${match.players[o].rank}>${match.players[o].name}</a></div>`
+					if (o+1 != match.players.length) {html += " | "}
+				}
+				html += "</div></div>"
+			} else {
+				html += `<div class="match"><p class="match_name">Could not fetch match ${match}</p></div>`
 			}
-
-			html = html + `<div class="players">`
-			for (let o = 0; o < match.players.length; o++) {
-				html = html + `<div class="player"><img src=${match.players[o].flag}><a href="https://osu.ppy.sh/users/${match.players[o].id}" title=${match.players[o].rank}>${match.players[o].name}</a></div>`
-				if (o+1 != match.players.length) {html = html + " | "} /// ????
-			}
-			html = html + "</div></div>"
 		}
-		html = html + "</div>"
-		if (tournaments[i].banner) {html = html + `<img class="banner" src="images/${tournaments[i].banner}">`}
-		html = html + "</div>"
+		html += "</div>"
+		if (tournaments[i].banner) {html += `<img class="banner" src="images/${tournaments[i].banner}">`}
+		html += "</div>"
 	}
 
-	html = html + `<footer id="return"><a href="../"><p>Return to main page</p></a></footer>`
-	html = html + "</body></html>"
+	html += `<footer id="return"><a href="../"><p>Return to main page</p></a></footer>`
+	html += "</body></html>"
 	fs.writeFile(output, html, function(err) {
 		if (err) {throw err}
 		console.log("\nThe webpage has been built successfully!")
@@ -163,6 +169,6 @@ async function buildWebpage() {
 }
 
 var html = '<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">'
-html = html + `<title>Taevas' tournament history</title><link rel="stylesheet" type="text/css" href="./index.css"></head><body><header><h1>Taevas' tournament history</h1></header>`
+html += `<title>Taevas' tournament history</title><link rel="stylesheet" type="text/css" href="./index.css"></head><body><header><h1>Taevas' tournament history</h1></header>`
 
 buildWebpage(html)

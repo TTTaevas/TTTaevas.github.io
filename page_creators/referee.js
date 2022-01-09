@@ -17,7 +17,8 @@ class Tournament {
 	constructor(name, forum, schedule, matches, banner) {
 		this.name = name
 		this.forum = forum
-		this.schedule = schedule.map(date => {
+		this.schedule = schedule.map(s_date => {
+			let date = new Date(s_date)
 			let a = [date.getFullYear(), date.getMonth()+1, date.getDate()]
 			a.forEach(function(b, c) {if (b.toString().length < 2) {a[c] = `0${b}`}})
 			return `${a[0]}-${a[1]}-${a[2]}`
@@ -87,7 +88,7 @@ class Player {
 async function addPlayer(player_id, context) {
 	let player = await get("get_user", `u=${player_id}`, context)
 	player = player[0]
-	return player != undefined ? new Player(player.user_id, player.username, player.country, player.pp_rank) : new Player(player_id, "BANNED_USER", "CX", Number.MAX_VALUE)
+	return player != undefined ? new Player(player.user_id, player.username, player.country, player.pp_rank) : new Player(player_id, `RESTRICTED_${player_id}`, "CX", Number.MAX_VALUE)
 }
 
 async function buildWebpage() {
@@ -111,30 +112,30 @@ async function buildWebpage() {
 	
 	for (let i = 0; i < tournaments.length; i++) {
 		// Tourney details
-		html = html + `<div class="tournament"><div class="details"><div class="tourney_name"><a href="${tournaments[i].forum}">${tournaments[i].name}</a></div>`
-		html = html + `<div class="schedule">From ${tournaments[i].schedule[0]} to ${tournaments[i].schedule[1]}</div>`
-		html = html + `<div class="number_matches"></div></div><div class="matches">`
+		html += `<div class="tournament"><div class="details"><div class="tourney_name"><a href="${tournaments[i].forum}">${tournaments[i].name}</a></div>`
+		html += `<div class="schedule">From ${tournaments[i].schedule[0]} to ${tournaments[i].schedule[1]}</div>`
+		html += `<div class="number_matches"></div></div><div class="matches">`
 
 		// Tourney matches
 		for (let e = 0; e < tournaments[i].matches.length; e++) {
 			let match = tournaments[i].matches[e]
-			html = html + `<div class="match"><div class="match_time">${match.schedule}</div>`
-			html = html + `<div class="number_players">${match.players.length} player${match.players.length > 1 ? "s" : ""}</div><div class="match_content">`
-			html = html + `<div class="match_name"><a href="${match.link}">${match.name}</a></div>`
-			html = html + `<div class="match_players">`
+			html += `<div class="match"><div class="match_time">${match.schedule}</div>`
+			html += `<div class="number_players">${match.players.length} player${match.players.length > 1 ? "s" : ""}</div><div class="match_content">`
+			html += `<div class="match_name"><a href="${match.link}">${match.name}</a></div>`
+			html += `<div class="match_players">`
 			for (let o = 0; o < match.players.length; o++) {
-				html = html + `<div class="player"><img src=${match.players[o].flag}><a href="https://osu.ppy.sh/users/${match.players[o].id}" title=${match.players[o].rank}>${match.players[o].name}</a></div>`
-				if (o+1 != match.players.length) {html = html + " | "}
+				html += `<div class="player"><img src=${match.players[o].flag}><a href="https://osu.ppy.sh/users/${match.players[o].id}" title=${match.players[o].rank}>${match.players[o].name}</a></div>`
+				if (o+1 != match.players.length) {html += " | "}
 			}
-			html = html + "</div></div></div>"
+			html += "</div></div></div>"
 		}
-		html = html + "</div>"
-		if (tournaments[i].banner) {html = html + `<img class="banner" src="images/${tournaments[i].banner}">`}
-		html = html + "</div>"
+		html += "</div>"
+		if (tournaments[i].banner) {html += `<img class="banner" src="images/${tournaments[i].banner}">`}
+		html += "</div>"
 	}
 
-	html = html + `<footer id="return"><a href="../"><p>Return to main page</p></a></footer>`
-	html = html + "</body></html>"
+	html += `<footer id="return"><a href="../"><p>Return to main page</p></a></footer>`
+	html += "</body></html>"
 	fs.writeFile(output, html, function(err) {
 		if (err) {throw err}
 		console.log("\nThe webpage has been built successfully!")
@@ -142,7 +143,7 @@ async function buildWebpage() {
 }
 
 var html = '<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">'
-html = html + '<title>Matches reffed by Taevas</title><link rel="stylesheet" type="text/css" href="./index.css"><script type="text/javascript" src="./search.js"></script><script type="text/javascript" src="./show_stats.js"></script></head><body onload="search(``)"><header><h1>Matches reffed by Taevas</h1></header>'
-html = html + '<input type="text" class="search" placeholder="Look for a player..." oninput="search(this.value.toLowerCase())"><p id="number_results"></p><button type="button" id="show_stats" onclick="show_stats()">Show Stats</button><button type="button" id="hide_stats" onclick="hide_stats()">Hide Stats</button>'
+html += '<title>Matches reffed by Taevas</title><link rel="stylesheet" type="text/css" href="./index.css"><script type="text/javascript" src="./search.js"></script><script type="text/javascript" src="./show_stats.js"></script></head><body onload="search(``)"><header><h1>Matches reffed by Taevas</h1></header>'
+html += '<input type="text" class="search" placeholder="Look for a player..." oninput="search(this.value.toLowerCase())"><p id="number_results"></p><button type="button" id="show_stats" onclick="show_stats()">Show Stats</button><button type="button" id="hide_stats" onclick="hide_stats()">Hide Stats</button>'
 
 buildWebpage(html)

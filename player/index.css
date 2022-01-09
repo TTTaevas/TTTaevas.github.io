@@ -256,15 +256,9 @@ img {
 	}
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1500px) {
 	.info {
 		position: absolute;
 		right: 0;
-	}
-}
-
-@media screen and (max-width: 1400px) {
-	.number_players, .match_time {
-		display: none;
 	}
 }
